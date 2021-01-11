@@ -1,0 +1,25 @@
+
+<mat-card class="main_card" >
+  <form [formGroup]="picform" (submit)="oneditsave()" *ngIf="!isloading">
+  <mat-card-header>
+    <button style="float:left; background-color:green; color:white" [routerLink]="['/userprofile']" mat-raised-button>Return </button>
+    <h2 Class="edit_header" style="margin-left:30%;">
+     Change Profile Picture
+    </h2>
+  </mat-card-header>
+<mat-card-content style="margin-top: 3rem;">
+
+
+      <div class="upload_image">
+        <button  class="button_upload" mat-stroked-button type="button" (click)="filepicker.click()">Upload</button>
+        <input  type="file" #filepicker (change)="onImagePicked($event)">
+
+        <div class="image-preview " *ngIf="imagePreview !== '' && imagePreview">
+          <img [src]="imagePreview" [alt]="picform.value.make">
+        </div>
+      </div>
+      <button class="submit_button" mat-raised-button color="accent" type="submit">update picture</button>
+</mat-card-content>
+</form>
+</mat-card>
+

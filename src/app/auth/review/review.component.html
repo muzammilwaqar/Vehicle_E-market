@@ -1,0 +1,20 @@
+<mat-card class="main_card">
+  <form [formGroup]="reviewForm" (submit)="onreviewcreate()"  *ngIf="!isloading">
+    <mat-card-title class="main_card_title">
+      Please Provide Honest Reviews About The User
+    </mat-card-title>
+    <mat-card-content class="main_card_content">
+
+        <input  class="main_card_content_field_text_input" type="text" placeholder="Subject" formControlName="subject">
+
+
+        <input  class="main_card_content_field_text_input" type="number" placeholder="Rate between 1 to 5" formControlName="rating">
+
+        <input class="main_card_content_field_text_area_input" type="textarea" placeholder="Review" formControlName="review">
+
+    </mat-card-content>
+    <mat-card-actions class="main_card_actions">
+      <button mat-raised-button type="submit"  class="main_card_actions_submit">Submit</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

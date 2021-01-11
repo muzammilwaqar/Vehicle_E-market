@@ -1,0 +1,252 @@
+<!--
+  <mat-toolbar >
+ <span> <a routerLink="/">V.E.M.B</a></span>
+ <span class="spacer"></span>
+ <ul>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/userprofile" routerLinkActive="mat-accent">Profile</a>
+    </li>
+    <li *ngIf="userIsAuthenticated ">
+      <a mat-button routerLink="/smartcontract">Smart</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/create" routerLinkActive="mat-accent">Create Post</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/login" routerLinkActive="mat-accent">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/signup" routerLinkActive="mat-accent">Sign-up</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>
+-->
+
+  <!-- Begin mobile menu -->
+
+  <a id="close_mobile_menu" href="javascript:;"></a>
+
+  <div class="mobile_menu_wrapper">
+      <a id="mobile_menu_close" href="javascript:;" class="button"><span class="ti-close"></span></a>
+
+      <div class="mobile_menu_content">
+
+          <div class="menu-main-menu-container">
+              <ul id="mobile_main_menu" class="mobile_main_nav">
+                  <li class="menu-item current-menu-item menu-item-has-children"><a routerLink="/">Home</a>
+                  </li>
+                  <li class="menu-item menu-item-has-children"><a routerLink="/posts">Cars</a>
+                  </li>
+                  <li class="menu-item menu-item-has-children"><a href="about-us.html">About Us</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="faqs.html">FAQs</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="blog-left-sidebar.html">Blog</a>
+                  </li>
+              </ul>
+          </div>
+
+          <!-- Begin side menu sidebar -->
+          <div class="page_content_wrapper">
+              <div class="sidebar_wrapper">
+                  <div class="sidebar">
+
+                      <div class="content">
+
+                          <ul class="sidebar_widget">
+                              <li id="text-8" class="widget widget_text">
+                                  <h2 class="widgettitle">For More Informations</h2>
+                                  <div class="textwidget"><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227
+                                      <br/>
+                                      <span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 </div>
+                              </li>
+                          </ul>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          <!-- End side menu sidebar -->
+
+          <div class="social_wrapper">
+              <ul><!--social links-->
+                  <li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook-official"></i></a></li>
+                  <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                  <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                  <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+<div class="header_style_wrapper">
+
+  <!-- Begin top bar -->
+  <div class="above_top_bar">
+      <div class="page_content_wrapper">
+
+          <div class="social_wrapper">
+              <ul><!--social links-->
+                  <li class="facebook" *ngIf="userIsAuthenticated">
+                    <a  routerLink="/userprofile" routerLinkActive="mat-accent">
+                      Profile
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a  routerLink="/auth/login" routerLinkActive="mat-accent">
+                      Login
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a >
+                      |
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a  routerLink="/auth/signup" routerLinkActive="mat-accent">
+                      Sign Up
+                    </a>
+                  </li>
+
+                  <li class="facebook" *ngIf="userIsAuthenticated">
+                    <a  routerLink="" (click)="onLogout()" >
+                      Logout
+                    </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="top_contact_info">
+              <div class="company_address">
+                  <div id="top_contact_address"><span class="ti-location-pin"></span>2 Floor Pak Plaza Double Road PWD</div>
+              </div>
+              <div>
+                  <div id="top_contact_number"><a href="tel:+92-335-5423119"><span class="ti-mobile"></span>+92-335-5423119</a></div>
+              </div>
+              <div>
+                  <div id="top_contact_hours"><span class="ti-alarm-clock"></span>Mon-Fri 09.00 - 17.00 </div>
+              </div>
+          </div>
+          <br class="clear" />
+      </div>
+  </div>
+  <!-- End top bar -->
+  <div class="top_bar scroll"  >
+      <div class="standard_wrapper" >
+          <!-- Begin logo -->
+          <div id="logo_wrapper">
+
+              <div id="logo_normal" class="logo_container">
+                  <div class="logo_align">
+                      <a id="custom_logo" class="logo_wrapper hidden" routerLink="/">
+                          <!--<img src="../../assets/images/vemb logo new.png" alt="" width="175" height="24" />-->
+                          <h2 style="color:#ffffff; width:100%">V.E.M.B</h2>
+                      </a><!--../../assets/images/logo@2x_white.png-->
+                  </div>
+              </div>
+
+              <div id="logo_transparent" class="logo_container">
+                  <div class="logo_align">
+                      <a id="custom_logo_transparent" class="logo_wrapper default" routerLink="/">
+                        <h2 style="color:#ffffff; width:100%">V.E.M.B</h2>
+                        <!--<img src="../../assets/images/vemb logo new.png" alt="" width="165" height="24" />-->
+                      </a>
+                  </div>
+
+              <!-- End logo -->
+
+              <div id="menu_wrapper" style="float: right; margin-left: 75rem; ">
+                  <div id="nav_wrapper">
+                      <div class="nav_wrapper_inner">
+                          <div id="menu_border_wrapper">
+                              <div class="menu-main-menu-container">
+                                  <ul id="main_menu" class="nav">
+                                      <li class="menu-item  menu-item-has-children ">
+                                        <a routerLink="/" style="font-size:15px;">
+                                          Home
+                                        </a>
+                                      </li>
+                                      <li class="menu-item  menu-item-has-children ">
+                                        <a style="font-size:16px;">
+                                          |
+                                        </a>
+                                      </li>
+                                      <li class="menu-item menu-item-has-children ">
+                                        <a routerLink="/posts" style="font-size:15px;">
+                                          Cars
+                                        </a>
+                                      </li>
+                                      <li class="menu-item  menu-item-has-children ">
+                                        <a style="font-size:16px;">
+                                          |
+                                        </a>
+                                      </li>
+                                      <li class="menu-item menu-item-has-children">
+                                        <a routerLink="/about" style="font-size:15px;">
+                                          About Us
+                                        </a>
+                                      </li>
+                                      <li class="menu-item  menu-item-has-children ">
+                                        <a style="font-size:16px;">
+                                          |
+                                        </a>
+                                      </li>
+                                      <li class="menu-item menu-item-has-children">
+                                        <a routerLink="/contactus" style="font-size:15px;">
+                                          Contact Us
+                                        </a>
+                                      </li>
+                                      <li class="menu-item  menu-item-has-children ">
+                                        <a style="font-size:16px;">
+                                          |
+                                        </a>
+                                      </li>
+                                      <li class="menu-item menu-item-has-children">
+                                        <a routerLink="/faq" style="font-size:15px;">
+                                          FAQs
+                                        </a>
+                                      </li>
+                                      <li class="menu-item  menu-item-has-children ">
+                                        <a style="font-size:16px;">
+                                          |
+                                        </a>
+                                      </li>
+                                      <li class="menu-item menu-item-has-children ">
+                                        <a routerLink="/blog" style="font-size:15px;">
+                                          Blog
+                                        </a>
+                                      </li>
+                                      <li class="menu-item  menu-item-has-children ">
+                                        <a style="font-size:16px;">
+                                          |
+                                        </a>
+                                      </li>
+                                      <li class="menu-item  menu-item-has-children ">
+                                        <button routerLink="/create" routerLinkActive="mat-accent" style="background-color: #27b803; border:0; color: #ffffff; font-size:18px; height:34px; border-radius: 50px 50px 50px 50px; width:140px;">
+                                          Sell Your Car
+                                        </button>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- End right corner buttons -->
+                  </div>
+                  <!-- End main nav -->
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+

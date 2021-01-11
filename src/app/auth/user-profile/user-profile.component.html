@@ -1,0 +1,618 @@
+
+<a id="close_mobile_menu" href="javascript:;"></a>
+
+<div class="mobile_menu_wrapper">
+    <a id="mobile_menu_close" href="javascript:;" class="button"><span class="ti-close"></span></a>
+
+    <div class="mobile_menu_content">
+
+        <div class="menu-main-menu-container">
+            <ul id="mobile_main_menu" class="mobile_main_nav">
+                <li class="menu-item current-menu-item menu-item-has-children"><a routerLink="/">Home</a>
+                </li>
+                <li class="menu-item menu-item-has-children"><a routerLink="/posts">Cars</a>
+                </li>
+                <li class="menu-item menu-item-has-children"><a href="about-us.html">About Us</a></li>
+                <li class="menu-item menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
+                <li class="menu-item menu-item-has-children"><a href="faqs.html">FAQs</a></li>
+                <li class="menu-item menu-item-has-children"><a href="blog-left-sidebar.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Begin side menu sidebar -->
+        <div class="page_content_wrapper">
+            <div class="sidebar_wrapper">
+                <div class="sidebar">
+
+                    <div class="content">
+
+                        <ul class="sidebar_widget">
+                            <li id="text-8" class="widget widget_text">
+                                <h2 class="widgettitle">For More Informations</h2>
+                                <div class="textwidget"><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227
+                                    <br/>
+                                    <span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End side menu sidebar -->
+
+        <div class="social_wrapper">
+            <ul><!--social links-->
+                <li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook-official"></i></a></li>
+                <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="header_style_wrapper">
+
+<!-- Begin top bar -->
+<div class="above_top_bar">
+    <div class="page_content_wrapper">
+
+        <div class="social_wrapper">
+            <ul><!--social links-->
+                <li class="facebook" *ngIf="userIsAuthenticated">
+                  <a  routerLink="/userprofile" routerLinkActive="mat-accent">
+                    Profile
+                  </a>
+                </li>
+                <li class="facebook" *ngIf="!userIsAuthenticated">
+                  <a  routerLink="/auth/login" routerLinkActive="mat-accent">
+                    Login
+                  </a>
+                </li>
+                <li class="facebook" *ngIf="!userIsAuthenticated">
+                  <a >
+                    |
+                  </a>
+                </li>
+                <li class="facebook" *ngIf="!userIsAuthenticated">
+                  <a  routerLink="/auth/signup" routerLinkActive="mat-accent">
+                    Sign Up
+                  </a>
+                </li>
+                <li class="facebook" *ngIf="userIsAuthenticated && approve == true ">
+                  <a  routerLink="/auth/admin" routerLinkActive="mat-accent">
+                    Admin
+                  </a>
+                </li>
+                <li class="facebook" *ngIf="userIsAuthenticated">
+                  <a  routerLink="" (click)="onLogout()" >
+                    Logout
+                  </a>
+                </li>
+            </ul>
+        </div>
+        <div class="top_contact_info">
+            <div class="company_address">
+                <div id="top_contact_address"><span class="ti-location-pin"></span>2 Floor Pak Plaza Double Road PWD</div>
+            </div>
+            <div>
+                <div id="top_contact_number"><a href="tel:+92-335-5423119"><span class="ti-mobile"></span>+92-335-5423119</a></div>
+            </div>
+            <div>
+                <div id="top_contact_hours"><span class="ti-alarm-clock"></span>Mon-Fri 09.00 - 17.00 </div>
+            </div>
+        </div>
+        <br class="clear" />
+    </div>
+</div>
+
+<!-- End top bar -->
+
+<!--Responsive nav bar start-->
+
+  <!--Responsive nav bar start-->
+
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        V.E.M.B
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a routerLink="/" style="margin-left:10px;" >Home</a>
+      <a routerLink="/posts" >Cars</a>
+      <a routerLink="/about">About Us</a>
+      <a routerLink="/contactus">Contact Us</a>
+      <a routerLink="/faq">F.A.Q</a>
+      <a routerLink="/inbox">Inbox</a>
+      <button routerLink="/create" routerLinkActive="mat-accent" style="background-color: #27b803; border:0; color: #ffffff;  height:34px; border-radius: 50px 50px 50px 50px; width:140px;padding-top: 5px;padding-bottom:5px;">Sell Your Car</button>
+   
+    </div>
+  </div>
+
+
+  <!--Responsive nav bar end-->
+
+<!--Responsive nav bar end-->
+</div>
+
+
+<div class="content" style="width:100%;margin-left:0;">
+  <div >
+  <mat-card class="user-details" style="margin-top:10rem ;" *ngIf="userdetails">
+      <mat-card-header style="align-items: center">
+        <div mat-card-avatar class="example-header-image">
+          <div >
+            <img *ngIf="userdetails.profileimage !== 'dummy' ||userdetails.profileimage"    id="myImg" [src]="userdetails.profileimage" [alt]="userdetails.fullName"  style="width:110%;max-width:400px; border-radius: 100%;">
+        </div>
+        </div>
+      </mat-card-header>
+      <mat-card-content class="userdetails_content">
+        <p class="showfield" ><b>Full Name :</b> {{userdetails.fullName}}</p><br>
+        <p class="showfield"><b>Email: </b> {{userdetails.email}}</p><br>
+        <p class="showfield"><b>Gender: </b>{{ userdetails.genderStatus}}</p><br>
+        <p class="showfield" ><b>CNIC : </b> {{userdetails.cnicNumber}}</p><br>
+        <p class="showfield" ><b>Address: </b> {{userdetails.fullAddress}}</p><br>
+        <p class="showfield" ><b>Phone number: </b> {{userdetails.phoneNumber}}</p><br>
+        <p class="showfield" ><b>Date of birth: </b> {{userdetails.dob | date }}</p><br>
+        <p class="showfield" ><b>Private Key: </b> {{userdetails.privateKey}}</p>
+      </mat-card-content>
+      <mat-card-actions *ngIf="userdetails._id == loggedinuserId">
+          <button mat-raised-button color="accent" class="edit-btn" (click)="onedit()"  >Edit Deatils</button>
+          <button mat-raised-button color="warn" class="delete-btn" (click)="onuserDelete(userdetails._id)">Delete Account</button>
+          <button mat-raised-button color="primary" class="pic-btn" style="border-radius: 20px;" (click)="oneditpic()">New Profile Pciture</button>
+      </mat-card-actions>
+  </mat-card>
+
+<div style="width: 115%;margin-left: -5rem; background-color:rgb(0, 0, 0); height: 5rem; border-radius: 15px;margin-top: 2rem;" >
+  <h3 style="text-align: center;color: rgb(255, 255, 255); padding-top:1.8rem;  font-size: 26px; font-weight: 700; font-family: 'Courier New', Courier, monospace; ">
+    On Going Contracts
+  </h3>
+</div>
+
+<div style="width: 115%;margin-left: -5rem;  height: 3rem; border-radius: 15px;margin-top: 0.5rem;" >
+  <h3 style="text-align: left;margin-left:3rem;color: rgb(0, 0, 0); padding-top:0.5;text-decoration: underline;  font-size: 26px; font-weight: 700; font-family:'Times New Roman', Times, serif;">
+    Incoming Contracts:
+  </h3>
+</div>
+
+  
+        <h3 *ngIf="sellercontract == 0">No Seller Contract Available!!</h3>
+          <mat-card *ngFor="let seller of sellercontract">
+              <mat-card-title>
+                <h4 style="font-size: 17px; font-weight: 500; font-family:'Times New Roman', Times, serif">
+                  Contract Between "{{seller.SellerName}}" & "{{seller.BuyerName}}"
+                </h4>
+              </mat-card-title>
+              <table style="width: 100%;">
+                <tr>
+                  <td colspan="3">
+                    <ul>
+                      <li>Buyer CNIC : {{seller.BuyerCNIC}}</li>
+                      <li>Seller CNIC: {{seller.SellerCNIC}}</li>
+                      <li *ngIf="seller.BuyerPK != '' " style="background-color:rgb(3, 196, 3); border-radius:20px;  padding:5px;color: white;">Buyer Key Status: Valid</li>
+                      <li *ngIf="seller.BuyerPK == '' " style="background-color:rgb(196, 9, 3)">InValid</li>
+                    </ul>
+                  </td>
+                  <td colspan="3">
+                    <ul>
+                      <li>Car: {{seller.make}} - {{seller.model}}</li>
+                      <li>Registration #: {{seller.registrationnumber}}</li>
+                      <li>Price: Rs-{{seller.price}}</li>
+                     
+                      <li>
+                        <!--<img [src]="seller.imagePath" [alt]="seller.make" id="myImg"  wdith="50px" height="50px" downnload>-->
+                        <button (click)="openDialog(seller.imagePath)" class="transfer_image_button">Transfer image</button>
+                    </li>
+                     
+
+
+                    </ul>
+                  </td>
+                  <td colspan="3">
+                    <ul>
+                      <li>Engine Type: {{seller.enginetype}}</li>
+                      <li>Engine Capacity: {{seller.enginecapacity}}cc</li>
+                      <li>Color: {{seller.exteriorcolor}}</li>                    </ul>
+                  </td>
+                  <td colspan="3">
+                    <ul style="list-style-type: none;">
+                      <li>
+                        <a mat-button class="accept_button" (click)="onaccept(seller._id)">
+                          Accept
+                        </a>
+                      </li>
+                      <li>
+                        <!--<button mat-button (click)="openDialog()">Open dialog</button>-->
+                        <a mat-button class="reject_button" (click)="onreject(seller._id)" >
+                          Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+
+          </mat-card>
+        
+  <div style="width: 115%;margin-left: -5rem;  height: 3rem; border-radius: 15px;margin-top: 1rem;" >
+    <h3 style="text-align: left;margin-left:3rem;color: rgb(0, 0, 0); text-decoration: underline; padding-top:0.5;  font-size: 26px; font-weight: 700; font-family:'Times New Roman', Times, serif ">
+      Contracts Applied For:
+    </h3>
+  </div>
+        <h3 *ngIf="buyercontract == 0">No Buyer Contract Available!!</h3>
+          <mat-card *ngFor="let seller of buyercontract">
+            <mat-card-title >
+              <p style="font-size: 17px; font-weight: 500; font-family:'Times New Roman', Times, serif">
+                Contract Between "{{seller.SellerName}}" & "{{seller.BuyerName}}"
+              </p>
+            </mat-card-title>
+            <table style="width: 100%;">
+              <tr>
+                <td colspan="3">
+                  <ul>
+                    <li>Buyer CNIC : {{seller.BuyerCNIC}}</li>
+                    <li>Seller CNIC : {{seller.SellerCNIC}}</li>
+                    <li *ngIf="seller.BuyerPK != '' " style="background-color:rgb(3, 196, 3); border-radius:20px; padding:5px;color: white;">Buyer Key Status: Valid</li>
+                    <li *ngIf="seller.BuyerPK == '' " style="background-color:rgb(196, 9, 3)">InValid</li>
+                  </ul>
+                </td>
+                <td colspan="3">
+                  <ul>
+                    <li>Car: {{seller.make}} - {{seller.model}}</li>
+                    <li>Registration #: {{seller.registrationnumber}}</li>
+                    <li>Price: Rs-{{seller.price}}</li>
+                    <button (click)="openDialog(seller.imagePath)" class="transfer_image_button">Transfer image</button>
+                  </ul>
+                </td>
+                <td colspan="3">
+                  <ul>
+                    <li>Engine Type: {{seller.enginetype}}</li>
+                    <li>Engine Capacity: {{seller.enginecapacity}}cc</li>
+                    <li>Color: {{seller.exteriorcolor}}</li>
+
+                  </ul>
+                </td>
+                <td colspan="3">
+                  <ul style="list-style-type: none;">
+               
+                
+                    <li>
+                      <!--<button mat-button (click)="openDialog()">Open dialog</button>-->
+                      <a mat-button class="reject_button" (click)="onreject(seller._id)" >
+                        Delete
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+
+          </mat-card>
+   
+
+
+  <div style="width: 115%;margin-left: -5rem; background-color:rgb(0, 0, 0); height: 5rem; border-radius: 15px;margin-top: 2rem;" >
+    <h3 style="text-align: center;color: rgb(255, 255, 255); padding-top:1.8rem;  font-size: 26px; font-weight: 700; font-family: 'Courier New', Courier, monospace; ">
+      Transfered Deals
+    </h3>
+  </div>
+  <div style="width: 115%;margin-left: -5rem;  height: 3rem; border-radius: 15px;margin-top: 1rem;" >
+    <h3 style="text-align: left;margin-left:3rem;color: rgb(0, 0, 0); text-decoration: underline; padding-top:0.5;  font-size: 26px; font-weight: 700; font-family: 'Courier New', Courier, monospace; ">
+     Vehicles Bought:
+    </h3>
+  </div>
+    <h3 *ngIf="buyercontractslist == 0">No Finalized Deals Available!!</h3>
+       
+        <mat-card *ngFor="let buyercontractdetails of buyercontractslist">
+          <mat-card-title>
+            {{buyercontractdetails[2][1]}} - {{buyercontractdetails[15][1]}}
+          </mat-card-title>
+        <mat-card-content>
+          <table style="width: 100%;">
+            <tr>
+              <th colspan="3">Buyer and Seller Details</th>
+              <th colspan="3">Deal Details</th>
+              <th colspan="3">Car Details</th>
+              <th colspan="3">Transfer Letter</th>
+              
+            </tr>
+            <tr>
+            
+              <td colspan="3">
+                <ul>
+                  <li>Buyer CNIC : {{buyercontractdetails[1][1]}}</li>
+                  <li>Buyer Full Name : {{buyercontractdetails[2][1]}}</li>
+                  <li>Seller CNIC : {{buyercontractdetails[14][1]}}</li>
+                  <li>Seller Full Name : {{buyercontractdetails[15][1]}}</li>
+                  
+                </ul>
+              </td>
+              <td colspan="3">
+                <ul>
+                  <li>Contract ID: {{buyercontractdetails[8][1]}}</li>
+                  <li>Registration #: {{buyercontractdetails[6][1]}}</li>
+                  <li>Price: Rs- {{buyercontractdetails[12][1]}}</li>
+                  
+                </ul>
+              </td>
+              <td colspan="3">
+                <ul>
+                  <li>Car: {{buyercontractdetails[4][1]}} - {{buyercontractdetails[5][1]}} - {{buyercontractdetails[7][1]}}</li>
+                  <li>Engine: {{buyercontractdetails[10][1]}} - {{buyercontractdetails[9][1]}}cc</li>
+                  <li>Transmission: {{buyercontractdetails[17][1]}}</li>
+                  <li>Registered City: {{buyercontractdetails[13][1]}}</li>
+
+                </ul>
+               
+              </td>
+              <td>
+                <button mat-button style="border-radius: 15px;background-color: green;color:white;" (click)="openDialog(buyercontractdetails[11][1])" >click to view</button>
+              </td>
+            </tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+     
+
+  <div style="width: 115%;margin-left: -5rem;  height: 3rem; border-radius: 15px;margin-top: 1rem;" >
+    <h3 style="text-align: left;margin-left:3rem;color: rgb(0, 0, 0); text-decoration: underline; padding-top:0.5;  font-size: 26px; font-weight: 700; font-family: 'Courier New', Courier, monospace; ">
+      Vehicles Sold:
+    </h3>
+  </div>
+  <h3 *ngIf="buyercontractslist == 0">No Finalized Deals Available!!</h3>
+     
+        <mat-card *ngFor="let sellercontractdetails of sellercontractslist">
+          <mat-card-title>
+            {{sellercontractdetails[15][1]}} - {{sellercontractdetails[2][1]}}
+          </mat-card-title>
+          <mat-card-content>
+            <table style="width: 100%;">
+              <tr>
+                <th colspan="3">Buyer and Seller Details</th>
+                <th colspan="3">Deal Details</th>
+                <th colspan="3">Car Details</th>
+                <th colspan="3">Transfer Letter</th>
+                
+              </tr>
+              <tr>
+              
+                <td colspan="3">
+                  <ul>
+                    <li>Buyer CNIC : {{sellercontractdetails[1][1]}}</li>
+                    <li>Buyer Full Name : {{sellercontractdetails[2][1]}}</li>
+                    <li>Seller CNIC : {{sellercontractdetails[14][1]}}</li>
+                    <li>Seller Full Name : {{sellercontractdetails[15][1]}}</li>
+                    
+                  </ul>
+                </td>
+                <td colspan="3">
+                  <ul>
+                    <li>Contract ID: {{sellercontractdetails[8][1]}}</li>
+                    <li>Registration #: {{sellercontractdetails[6][1]}}</li>
+                    <li>Price: Rs- {{sellercontractdetails[12][1]}}</li>
+                  </ul>
+                </td>
+                <td colspan="3">
+                  <ul>
+                    <li>Car: {{sellercontractdetails[4][1]}} - {{sellercontractdetails[5][1]}} - {{sellercontractdetails[7][1]}}</li>
+                    <li>Engine: {{sellercontractdetails[10][1]}} - {{sellercontractdetails[9][1]}}cc</li>
+                    <li>Transmission: {{sellercontractdetails[17][1]}}</li>
+                    <li>Registered City: {{sellercontractdetails[13][1]}}</li>
+
+                  </ul>
+                 
+                </td>
+                <td>
+                  <button mat-button style="border-radius: 15px;background-color: green;color:white;"  (click)="openDialog(sellercontractdetails[11][1])">click to view</button>
+                </td>
+              </tr>
+            </table>
+          </mat-card-content>
+        </mat-card>
+
+
+
+  <div style="width: 115%;margin-left: -5rem; background-color:rgb(0, 0, 0); height: 5rem; border-radius: 15px;margin-top: 2rem;" >
+    <h3 style="text-align: center;color: rgb(255, 255, 255); padding-top:1.8rem;  font-size: 26px; font-weight: 700; font-family: 'Courier New', Courier, monospace; ">
+      Bar-chart Ads Representation
+    </h3>
+  </div>
+
+  <mat-card class="report-card" >
+    <div style="display: block">
+      <canvas *ngIf="chartReady" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [chartType]="barChartType">
+      </canvas>
+    </div>
+  </mat-card>
+  </div>
+
+  <div style="margin-bottom:1rem; width: 115%;margin-left: -5rem; background-color:rgb(0, 0, 0); height: 5rem; border-radius: 15px;margin-top: 2rem;" >
+    <h3 style="text-align: center;color: rgb(255, 255, 255); padding-top:1.8rem;  font-size: 26px; font-weight: 700; font-family: 'Courier New', Courier, monospace; ">
+      Your Ads - {{allposts.length}}
+    </h3>
+  </div>
+
+  
+  <div *ngIf="allposts" style="width: 125.6%;margin-left: -10rem; ">
+    
+      <mat-card  class="car_card" *ngFor="let post of allposts" (click)="singlepost(post._id)" style="width: 80%; margin-left: auto;margin-right: auto; font-family: Georgia, 'Times New Roman', Times, serif;"  >
+        <div class="row">
+          <div class="col col-xs-3 col-md-3 col-sm-3 col-lg-3 col-xl-3" >
+            <img [src]="post.imagePath" width="180px" height="100px" style="border-radius: 10px;">
+          </div>
+          <div class="col col-xs-3 col-md-3 col-sm-3 col-lg-3 col-xl-3">
+            <ul style="">
+              <li><b>Make : </b> {{post.make}}</li>
+              <li><b>Model : </b>{{post.model}}</li>
+              <li><b>Color : </b>{{post.exteriorcolor}}</li>
+              <li><b>Current City : </b>{{post.city}}</li>
+              <li><b>Assembly : </b>{{post.assembly}}</li>
+            </ul>
+          </div>
+          <div class="col col-xs-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
+            <ul >
+              <li><b>Price : </b>{{post.price}}</li>
+              <li><b>Engine Type : </b>{{post.enginetype}}</li>
+              <li><b>Engine Capacity : </b>{{post.enginecapacity}}cc</li>
+              <li><b>Transmission : </b>{{post.transmission}}</li>
+              <li><b>Registration City : </b>{{post.registrationcity}}</li>
+            </ul>
+          </div>
+          <div class="col col-xs-2 col-md-2 col-sm-2 col-lg-2 col-xl-2">
+            <ul>
+              <li style="list-style-type: none;"><a style="margin-bottom: 2px; width: 5rem; border-radius: 10px 10px 10px 0;"  mat-flat-button color="primary" class="action-buttons" [routerLink]="['/edit',post._id]" > EDIT</a></li>
+              <!--<li style="list-style-type: none;"><a style="margin-top: 2px; margin-bottom: 2px; width: 5rem;border-radius: 10px 10px 10px 0;" mat-flat-button color="primary" class="action-buttons" (click)="singlepost(post._id)"  >View</a></li>
+              -->
+              <li style="list-style-type: none;"><a style="margin-top: 2px; width: 5rem;border-radius: 10px 10px 10px 0;"  mat-flat-button color="warn" class="action-buttons" (click)="onpostDelete(post._id)" > DELETE</a></li>
+            </ul>
+          </div>
+        </div>
+      </mat-card>
+    
+  </div>
+</div>
+
+
+
+<p style="height: 45px;">
+
+</p>
+    <div id="footer" class=" ppb_wrapper" style="position: relative; width: 125.6%; margin-left:-10rem;">
+      <ul class="sidebar_widget three">
+          <li id="text-2" class="widget widget_text">
+              <h2 class="widgettitle">About Us</h2>
+              <div class="textwidget">
+                  <p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience. </p>
+                  <!--put logo-->
+                  <!--<p><img src="../../assets/images/logo@2x_white.png" alt="" width="175" height="24"></p>-->
+              </div>
+          </li>
+          <li id="text-3" class="widget widget_text">
+              <h2 class="widgettitle">Contact Info</h2>
+              <div class="textwidget">
+                  <p><span class="ti-mobile" style="margin-right:10px;"></span>+92-335-5423119</p>
+                  <p><span class="ti-location-pin" style="margin-right:10px;"></span>2 Floor Pak Plaza Main Pwd Double </p>
+                  <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</p>
+                  <div style="margin-top:20px;">
+                      <div class="social_wrapper shortcode dark ">
+                          <ul><!--Social Links-->
+                              <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li class="twitter"><a target="_blank" title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                              <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                              <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li id="mc4wp_form_widget-5" class="widget widget_mc4wp_form_widget">
+              <h2 class="widgettitle">Newsletter</h2>
+
+              <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-27" method="post" data-id="27" data-name="Newsletter">
+                  <div class="mc4wp-form-fields">Don't miss a thing! Sign up to receive daily deals
+
+                      <input type="email" name="EMAIL" placeholder="Your Email Address" required />
+                      <br/>
+                      <input type="submit" value="Subscribe" />
+                  </div>
+                  <label style="display: none !important;">Leave this field empty if you're human:
+                      <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+                  </label>
+
+                  <div class="mc4wp-response"></div>
+              </form>
+          </li>
+      </ul>
+  </div>
+  <div class="footer_bar  ppb_wrapper " style="position: relative; width: 125.6%; margin-left:-10rem;">
+
+    <div class="footer_bar_wrapper  " >
+        <div class="menu-footer-menu-container">
+          <ul id="footer_menu" class="footer_nav">
+            <li class="menu-item"><a routerLink="/about">About Us</a></li>
+            <li class="menu-item"><a routerLink="/posts">Cars</a></li>
+            <li class="menu-item"><a routerLink="/faq">FAQs</a></li>
+            <li class="menu-item"><a routerLink="/contactus">Contact Us</a></li>
+        </ul>
+        </div>
+        <div id="copyright">© Copyright V.E.M.B</div>
+        <br class="clear" />
+    </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+  $("#myCarousel").on("slide.bs.carousel", function(e) {
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 3;
+    var totalItems = $(".carousel-item").length;
+
+    if (idx >= totalItems - (itemsPerSlide - 1)) {
+      var it = itemsPerSlide - (totalItems - idx);
+      for (var i = 0; i < it; i++) {
+        // append slides to end
+        if (e.direction == "left") {
+          $(".carousel-item")
+            .eq(i)
+            .appendTo(".carousel-inner");
+        } else {
+          $(".carousel-item")
+            .eq(0)
+            .appendTo($(this).find(".carousel-inner"));
+        }
+      }
+    }
+  });
+});
+
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+  </script>
+  

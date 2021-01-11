@@ -1,0 +1,357 @@
+<!--Header Start-->
+<a id="close_mobile_menu" href="javascript:;"></a>
+
+  <div class="mobile_menu_wrapper">
+      <a id="mobile_menu_close" href="javascript:;" class="button"><span class="ti-close"></span></a>
+
+      <div class="mobile_menu_content">
+
+          <div class="menu-main-menu-container">
+              <ul id="mobile_main_menu" class="mobile_main_nav">
+                  <li class="menu-item current-menu-item menu-item-has-children"><a routerLink="/">Home</a>
+                  </li>
+                  <li class="menu-item menu-item-has-children"><a routerLink="/posts">Cars</a>
+                  </li>
+                  <li class="menu-item menu-item-has-children"><a href="about-us.html">About Us</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="faqs.html">FAQs</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="blog-left-sidebar.html">Blog</a>
+                  </li>
+              </ul>
+          </div>
+
+          <!-- Begin side menu sidebar -->
+          <div class="page_content_wrapper">
+              <div class="sidebar_wrapper">
+                  <div class="sidebar">
+
+                      <div class="content">
+
+                          <ul class="sidebar_widget">
+                              <li id="text-8" class="widget widget_text">
+                                  <h1 class="widgettitle">For More Informations</h1>
+                                  <div class="textwidget"><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227
+                                      <br/>
+                                      <span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 </div>
+                              </li>
+                          </ul>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          <!-- End side menu sidebar -->
+
+          <div class="social_wrapper">
+              <ul><!--social links-->
+                  <li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook-official"></i></a></li>
+                  <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                  <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                  <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+<div class="header_style_wrapper">
+
+  <!-- Begin top bar -->
+  <div class="above_top_bar">
+      <div class="page_content_wrapper">
+
+          <div class="social_wrapper">
+              <ul><!--social links-->
+                  <li class="facebook" *ngIf="userIsAuthenticated">
+                    <a  routerLink="/userprofile" routerLinkActive="mat-accent">
+                      Profile
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a  routerLink="/auth/login" routerLinkActive="mat-accent">
+                      Login
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a >
+                      |
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a  routerLink="/auth/signup" routerLinkActive="mat-accent">
+                      Sign Up
+                    </a>
+                  </li>
+
+                  <li class="facebook" *ngIf="userIsAuthenticated">
+                    <a  routerLink="" (click)="onLogout()" >
+                      Logout
+                    </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="top_contact_info">
+              <div class="company_address">
+                  <div id="top_contact_address"><span class="ti-location-pin"></span>2 Floor Pak Plaza Double Road PWD</div>
+              </div>
+              <div>
+                  <div id="top_contact_number"><a href="tel:+92-335-5423119"><span class="ti-mobile"></span>+92-335-5423119</a></div>
+              </div>
+              <div>
+                  <div id="top_contact_hours"><span class="ti-alarm-clock"></span>Mon-Fri 09.00 - 17.00 </div>
+              </div>
+          </div>
+          <br class="clear" />
+      </div>
+  </div>
+  <!-- End top bar -->
+  <div class="top_bar scroll"  >
+      <div class="standard_wrapper" >
+          <!-- Begin logo -->
+          <div id="logo_wrapper">
+
+              <div id="logo_normal" class="logo_container">
+                  <div class="logo_align">
+                      <a id="custom_logo" class="logo_wrapper hidden" routerLink="/">
+                          <!--<img src="../../assets/images/vemb logo new.png" alt="" width="175" height="24" />-->
+                          <h1 style="color:#ffffff; width:100%">V.E.M.B</h1>
+                      </a><!--../../assets/images/logo@2x_white.png-->
+                  </div>
+              </div>
+
+              <div id="logo_transparent" class="logo_container">
+                  <div class="logo_align">
+                      <a id="custom_logo_transparent" class="logo_wrapper default" routerLink="/">
+                        <h1 style="color:#ffffff; width:100%">V.E.M.B</h1>
+                        <!--<img src="../../assets/images/vemb logo new.png" alt="" width="165" height="24" />-->
+                      </a>
+                  </div>
+
+              <!-- End logo -->
+
+              <div class="nav">
+                <input type="checkbox" id="nav-check">
+                <div class="nav-header">
+                  <div class="nav-title">
+                    V.E.M.B
+                  </div>
+                </div>
+                <div class="nav-btn">
+                  <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                </div>
+                
+                <div class="nav-links">
+                  <a routerLink="/" style="margin-left:10px;" >Home</a>
+                  <a routerLink="/posts" >Cars</a>
+                  <a routerLink="/about">About Us</a>
+                  <a routerLink="/contactus">Contact Us</a>
+                  <a routerLink="/faq">F.A.Q</a>
+                  <a routerLink="/inbox">Inbox</a>
+                  <button routerLink="/create" routerLinkActive="mat-accent" style="background-color: #27b803; border:0; color: #ffffff;  height:34px; border-radius: 50px 50px 50px 50px; width:140px;padding-top: 5px;padding-bottom:5px;">Sell Your Car</button>
+               
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--Header Ends-->
+
+<!--Main Content Starts-->
+  <div class="container" style="width:115%;  margin-top:10rem;">
+    <div class="row">
+      <div class="col col-xs-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+        <img src="../../../assets/web-image-asset/blog-images/Inkedcr_LI-750x428.jpg">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-xs-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+        <h1 >Corolla 1.3 XLi 2006 Vs. Altis 1.8- Budget Review</h1>
+        <p>In the budget car review series, we will discuss the Corolla 1.3 XLi, 2006 model and 1800cc Corolla Altis. This 10th generation car by Toyota was launched in Pakistan in 2002 till 2008. From 1994 to 2002, Toyota’s 9th generation Corolla remained in Pakistan, and people were starved for a new generation, model, shape and features.</p>
+        <br>
+        <p>After its release, Corolla XLi, GLi, and S.E. Saloon were a massive hit in Pakistan. This model was the first one, which boosted the ‘ON Money’ trend in Pakistan. The dealerships received up to Rs 2-lac ‘ON’ for these cars.</p>
+        <br>
+        <h3>Interior of Corolla Variants: </h3><br>
+        <p>
+          The two-tone interior of this car revolutionary in Pakistan and was one-up to its competitors. Before that, Toyota’s interior used to be in dark grey.
+        </p>
+        <hr/>
+        <h3>Engine Power:</h3>
+        <br>
+        <p>The XLi and GLi came with 1300cc engine, while the company introduced S.E. Sloon with 1600cc engine. In Pakistan, there is a myth that small-engine cars are more fuel-efficient; hence, the first two variants became an instant hit in the country.</p>
+        <br>
+        <p>
+          Initially, all the variants had a manual transmission. However, Toyota launched Automatic transmission for S.E. Saloon in 2004-05. After that, the company launched 1800cc Toyota Altis in 2006, but it was not so successful initially.
+        </p>
+        <br>
+        <p>
+          This car’s variant 2.D. The saloon was among the last vehicles with a diesel engine and was a great hit in the country.
+        </p>
+        <hr />
+        <h3>Corolla A Budget Car? </h3>
+        <br>
+        <p>
+          After almost 14-15 years, this car is still very famous in the country because it is a family car, with boot space at a very reasonable price.
+        </p>
+        <hr/>
+        <h3>
+          Price of Corolla Variants:
+        </h3>
+        <br>
+        <p>
+          You can buy used Altis with automatic transmission and good condition in Rs 1.2million, while the price of the manual version is around Rs1.5 million. Meanwhile, the price of automatic Corolla S.E. Saloon is Rs 1.5 million, while its manual variant can cost about Rs1 million.
+        </p>
+        <br>
+        <p>
+          Interestingly, the prices of GLi and XLi is still above Rs1.2 million. The reason behind the high prices is that small engines are high demand in small cities.
+        </p>
+        <br>
+        <p>
+          The parts availability, maintenance cost and price of parts are other major reasons behind the success of these cars by Toyota.
+        </p>
+        <hr/>
+        <h3>
+          Price of Corolla Variants:
+        </h3>
+        <br>
+        <p>
+          You can buy used Altis with automatic transmission and good condition in Rs 1.2million, while the price of the manual version is around Rs1.5 million. Meanwhile, the price of automatic Corolla S.E. Saloon is Rs 1.5 million, while its manual variant can cost about Rs1 million.
+        </p>
+        <br>
+        <p>
+          Interestingly, the prices of GLi and XLi is still above Rs1.2 million. The reason behind the high prices is that small engines are high demand in small cities.
+        </p>
+        <br>
+        <p>
+          The parts availability, maintenance cost and price of parts are other major reasons behind the success of these cars by Toyota.
+        </p>
+        <hr/>
+        <h3>
+          Fuel Economy:
+        </h3>
+        <br>
+        <p>
+          The biggest reason behind the success of Corolla XLi and GLi was their fuel economy. Even today, a well-maintained Corolla will give you fuel average of 13-14 kilometres/litre.
+        </p>
+        <br>
+        <p>Meanwhile, the average of automatic S.E. Saloon and Altis is around 10 kilometres/litre, and manual variant gives 12 kilometres/litres.</p>
+        <hr/>
+        <h3>
+          A.C. Performance:
+        </h3>
+        <br>
+        <p>
+          The A.C. performance of all variants was excellent, and consumers still don’t have any issues with it.
+        </p>
+        <hr/>
+        <h3>
+          Key Features: Corolla XLi/GLi Vs S.E. Saloon/Altis
+        </h3>
+        <br>
+        <p>
+          The S.E. Saloon and Altis come with single airbags, ABS power windows, power steering and CD/Cassette player. Additionally, the feature which became most famous among the consumers was illuminated meter of these cars.
+        </p>
+        <br>
+        <p>
+          Meanwhile, S.E. Saloon and Altis came with the wooden trim console, while it was in simple black colour in GLi and XLi. The quality of the dashboard of this car is exceptional.
+        </p>
+        <br>
+        <p>
+          The Saloon and Altis variants have fog lamps, body-coloured automatic side mirrors and side panels, while these options were not available in XLi and Gli. Furthermore, the GLi and XLI didn’t come with alloy rims and side skirts.
+        </p>
+        <br>
+        <p>
+          Meanwhile, the car frame, parts and design are similar in all variants.
+        </p>
+        <br>
+
+      </div>
+    </div>
+  </div>
+<!--Main Content ENds-->
+
+<!--Footer Starts-->
+
+
+<p style="height: 45px;">
+
+</p>
+    <div id="footer" class=" ppb_wrapper" style="position: relative; width: 125.6%; margin-left:-10rem;">
+      <ul class="sidebar_widget three">
+          <li id="text-2" class="widget widget_text">
+              <h1 class="widgettitle">About Us</h1>
+              <div class="textwidget">
+                  <p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience. </p>
+                  <!--put logo-->
+                  <!--<p><img src="../../assets/images/logo@2x_white.png" alt="" width="175" height="24"></p>-->
+              </div>
+          </li>
+          <li id="text-3" class="widget widget_text">
+              <h1 class="widgettitle">Contact Info</h1>
+              <div class="textwidget">
+                  <p><span class="ti-mobile" style="margin-right:10px;"></span>+92-335-5423119</p>
+                  <p><span class="ti-location-pin" style="margin-right:10px;"></span>2 Floor Pak Plaza Main Pwd Double </p>
+                  <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</p>
+                  <div style="margin-top:20px;">
+                      <div class="social_wrapper shortcode dark ">
+                          <ul><!--Social Links-->
+                              <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li class="twitter"><a target="_blank" title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                              <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                              <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li id="mc4wp_form_widget-5" class="widget widget_mc4wp_form_widget">
+              <h1 class="widgettitle">Newsletter</h1>
+
+              <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-27" method="post" data-id="27" data-name="Newsletter">
+                  <div class="mc4wp-form-fields">Don't miss a thing! Sign up to receive daily deals
+
+                      <input type="email" name="EMAIL" placeholder="Your Email Address" required />
+                      <br/>
+                      <input type="submit" value="Subscribe" />
+                  </div>
+                  <label style="display: none !important;">Leave this field empty if you're human:
+                      <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+                  </label>
+
+                  <div class="mc4wp-response"></div>
+              </form>
+          </li>
+      </ul>
+  </div>
+  <div class="footer_bar  ppb_wrapper " style="position: relative; width: 125.6%; margin-left:-10rem;">
+
+    <div class="footer_bar_wrapper ">
+        <div class="menu-footer-menu-container">
+          <ul id="footer_menu" class="footer_nav">
+            <li class="menu-item"><a routerLink="/about">About Us</a></li>
+            <li class="menu-item"><a routerLink="/posts">Cars</a></li>
+            <li class="menu-item"><a routerLink="/faq">FAQs</a></li>
+            <li class="menu-item"><a routerLink="/contactus">Contact Us</a></li>
+        </ul>
+        </div>
+        <div id="copyright">© Copyright V.E.M.B</div>
+        <br class="clear" />
+    </div>
+  </div>
+
+
+<!--Footer Ends-->

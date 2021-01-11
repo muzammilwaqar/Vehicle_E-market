@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+  <form [formGroup]="resetform" (submit)="onreset()"  *ngIf="!isloading">
+    <div class="row">
+      <div class="col col-lg-4 col-md-4">
+        <mat-card class="main-card">
+          <mat-card-header class="mat-header">
+            <mat-card-title class="mat-header-title main-heading">Here is You New Password Make Sure to Save it SomeWhere</mat-card-title>
+              <mat-card-subtitle class="mat-header-subtitle sub-heading">If You want to You can change it from user profile</mat-card-subtitle>
+          </mat-card-header>
+          <!-- Full name Field Field -->
+          <mat-form-field>
+            <h2>New Password :  </h2>
+          </mat-form-field>
+
+        </mat-card>
+      </div>
+    </div>
+  </form>
+</div>
+

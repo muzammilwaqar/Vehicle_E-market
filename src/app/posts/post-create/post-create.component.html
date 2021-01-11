@@ -1,0 +1,236 @@
+<div class="container" >
+  <br>
+  <div class="row">
+    <h1 align="center" class="main-heading"><b>Sell Your Car With Us</b></h1>
+    <h3 align="center" class="sub-heading">It's Free and Takes less than 60 Seconds</h3>
+  </div>
+
+  <div class="container form-container container-fluid">
+    <mat-spinner *ngIf="isloading"></mat-spinner>
+    <form [formGroup]="form" (submit)="onSavePost()"  *ngIf="!isloading">
+    <div class="row">
+      <mat-card class="main-card">
+        <mat-card-header class="mat-header">
+          <mat-card-title class="mat-header-title">Car Information</mat-card-title>
+          <mat-card-subtitle class="mat-header-subtitle">All fields are required to be filled</mat-card-subtitle>
+        </mat-card-header>
+        <!--City-->
+        <mat-form-field class="select-option">
+          <mat-label>City</mat-label>
+          <mat-select [formControlName]="'city'" >
+            <mat-option *ngFor="let c of cities" [value]="c.value">
+              {{c.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+         <!--Make-->
+         <mat-form-field class="select-option">
+          <mat-label>Make</mat-label>
+          <mat-select [formControlName]="'make'">
+            <mat-option *ngFor="let m of make" [value]="m.value">
+              {{m.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+         <!--Model-->
+         <mat-form-field >
+          <input matInput type="text" [formControlName]="'model'" placeholder="Model">
+          <mat-error *ngIf="form.get('model').invalid">
+            Please Enter A model
+          </mat-error>
+         </mat-form-field>
+
+         <!--Registration City-->
+         <mat-form-field class="select-option">
+          <mat-label>Registration City</mat-label>
+          <mat-select [formControlName]="'registrationcity'">
+            <mat-option *ngFor="let rc of cities" [value]="rc.value">
+              {{rc.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+         <!--Exterior Color-->
+         <mat-form-field class="select-option">
+          <mat-label>Exterior Color</mat-label>
+          <mat-select [formControlName]="'exteriorcolor'">
+            <mat-option *ngFor="let ec of exteriorcolor" [value]="ec.value">
+              {{ec.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+         <!--Mileage-->
+         <mat-form-field class="example-full-width">
+          <input matInput  type="text"  [formControlName]="'mileage'" placeholder="Mileage">
+          <mat-hint>In KM only write value as 25</mat-hint>
+          <mat-error *ngIf="form.get('mileage').invalid">
+            Please Enter A Make "company"
+          </mat-error>
+         </mat-form-field>
+
+         <!--description-->
+         <mat-form-field class="example-full-width">
+          <input  matInput type="textarea" [formControlName]="'description'" placeholder="Description">
+          <mat-error *ngIf="form.get('description').invalid">
+            Please Enter description about your car
+          </mat-error>
+        </mat-form-field>
+
+      </mat-card>
+
+      <mat-card class="main-card price-card">
+        <!--price-->
+        <mat-form-field class="example-full-width">
+          <input matInput type="text"  [formControlName]="'price'" placeholder="Expected Price to Sell">
+          <mat-error *ngIf="form.get('price').invalid">
+            Please Enter A price
+          </mat-error>
+         </mat-form-field>
+      </mat-card>
+
+      <mat-card class=" image-card" >
+        <mat-card-header class="mat-header">
+          <mat-card-title class="mat-header-title">Car Images</mat-card-title>
+          <mat-card-subtitle class="mat-header-subtitle">file size upto 5mb only* with jpg,png</mat-card-subtitle>
+        </mat-card-header>
+
+        <!--images-->
+     <!--
+        <div class="image-picked">
+       
+        <div class="">
+        <button mat-stroked-button type="button" class="image-picked-button" (click)="filepicker.click()" multiple>Choose Image</button>
+        <input type="file" #filepicker (change)="onImagePicked($event)" multiple>
+      </div>
+      <div class="image-preview " *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid" >
+
+        <img [src]="imagePreview" [alt]="form.value.title" width="150px" height="150px">
+
+      </div>
+    </div> -->
+    
+        <div class="image-picked">
+          <div class="">
+            <button mat-stroked-button type="button" class="image-picked-button" (click)="filepicker.click()" multiple>Choose Image</button>
+            <input type="file" #filepicker (change)="selectfiles($event)" multiple>
+            <table>
+              <tr>
+                <td *ngFor="let url of urls">
+                  <img  [src]="url" width="100px" height="100px">
+                </td>
+              </tr>
+            </table>
+            
+          </div>
+          
+        </div>
+    
+         
+
+
+
+
+      </mat-card>
+
+      <mat-card class="main-card">
+
+      <!--engine type-->
+      <mat-form-field class="select-option">
+        <mat-label>Engine Type</mat-label>
+        <mat-select [formControlName]="'enginetype'">
+          <mat-option *ngFor="let et of enginetype" [value]="et.value">
+            {{et.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+       <!--egnien capacity-->
+
+      <mat-form-field class="select-option">
+        <input  matInput type="text" [formControlName]="'enginecapacity'" placeholder="Engine Capacity" >
+        <mat-error *ngIf="form.get('enginecapacity').invalid">
+          Please Enter engine capacity
+        </mat-error>
+       </mat-form-field>
+
+       <!--Transmission-->
+       <mat-form-field class="select-option">
+        <mat-label>Transmission</mat-label>
+        <mat-select [formControlName]="'transmission'">
+          <mat-option *ngFor="let trans of transmission" [value]="trans.value">
+            {{trans.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <!--assembly-->
+      <mat-form-field class="select-option">
+        <mat-label>Assembly</mat-label>
+        <mat-select [formControlName]="'assembly'">
+          <mat-option *ngFor="let assembled of assembly" [value]="assembled.value">
+            {{assembled.viewValue}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('assembly').invalid">
+          Please Enter where it was assembled
+        </mat-error>
+      </mat-form-field>
+
+      <!--features-->
+      <mat-form-field class=" select-option">
+        <mat-chip-list #chipList aria-label="Fruit selection" [formControlName]="'features'">
+          <mat-chip
+            *ngFor="let feature of features"
+            [selectable]="selectable"
+            [removable]="removable"
+            (removed)="remove(feature)">
+            {{feature}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input
+            placeholder="Features"
+            #fruitInput
+            [formControlName]="'features'"
+            [matAutocomplete]="auto"
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+          <mat-option *ngFor="let feature of filteredFeatures | async" [value]="feature">
+            {{feature}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      </mat-card>
+
+
+
+
+      <mat-card class="main-card number-card">
+       <!--contact number-->
+       <mat-form-field >
+        <input matInput  type="text"  [formControlName]="'mobilenumber'" placeholder="Mobile Number">
+        <mat-error *ngIf="form.get('mobilenumber').invalid">
+          Please Enter A Mobile Number
+        </mat-error>
+       </mat-form-field>
+      </mat-card>
+    </div>
+    <br>
+
+    <div class="row submit-row">
+
+      <button align="right" mat-raised-button color="accent" class="submit-button"type="submit">Save Post</button>
+
+    </div>
+    </form>
+  </div>

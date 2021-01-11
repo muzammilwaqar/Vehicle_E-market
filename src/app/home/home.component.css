@@ -1,0 +1,260 @@
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #009cf7, 0 0 40px #0099ff, 0 0 45px #00aeff, 0 0 50px #03b2f7, 0 0 55px #12a5e9;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #27B803, 0 0 40px #27B803, 0 0 45px #27B803, 0 0 50px #27B803, 0 0 55px #27B803, 0 0 60px #27B803;
+  }
+} 
+.glowing_btn_sell:hover
+{
+  background: #00e613;
+  color:white;
+  box-shadow: 0 0 5px #00e613,
+              0 0 25px #00e613,
+              0 0 50px #00e613,
+              0 0 200px #00e613;
+  font-size:22px;
+  height: 2.9rem;
+  width: 16.5rem;
+  margin:5px;
+  padding:5px;
+}
+
+.glowing_btn_sell:nth-child(1)
+{
+  top: 0;
+  left:-100%;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, transparent,#00e613);
+  animation: animate1 2s linear infinite
+}
+@keyframes animate1
+{
+  0%
+  {
+    left:-100%;
+  }
+  50%,100%
+  {
+    left:100%;
+  }
+}
+.glowing_btn_buy:hover
+{
+  background: #f81d00;
+  color:white;
+  box-shadow: 0 0 5px #f81d00,
+              0 0 25px #f81d00,
+              0 0 50px #f81d00,
+              0 0 200px #f81d00;
+  font-size:22px;
+  height: 2.9rem;
+  width: 16.5rem;
+  margin:5px;
+  padding:5px;
+}
+.glowing_btn_buy:nth-child(1)
+{
+  top: 0;
+  left:-100%;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, transparent, #f81d00);
+  animation: animate2 2s linear infinite
+}
+@keyframes animate2
+{
+  0%
+  {
+    left:-100%;
+  }
+  50%,100%
+  {
+    left:100%;
+  }
+}
+
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+/*
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+
+/*nav*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #000000;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  margin-left:50%;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+
+/*screen fit*/
+.screen_fit
+{
+  width: 101.48%;
+  
+}
+/*
+@media screen and (max-width: 480px) {
+  .screen_fit
+    {
+        width: 100%;
+        margin-left: 10rem;
+    }
+}
+*/

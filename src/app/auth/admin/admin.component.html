@@ -1,0 +1,103 @@
+
+<mat-spinner *ngIf="isloading"></mat-spinner>
+<div class="container" style="width:125.6; margin-left:-10.2rem;">
+  <div class="sidebar">
+    <a routerLink='/auth/admin'>Home</a>
+    <a routerLink='/auth/create-admin'>Create Admin</a>
+    <a routerLink='/auth/allusers'>All Users</a>
+    <a routerLink='/auth/unverified' >Unverified Users</a>
+    <a routerLink='/auth/verified'>Verified Users</a>
+    <a routerLink="/create">Post and Ad</a>
+    <a routerLink="/userprofile">Profile</a>
+    <a routerLink="/">Main Web</a>
+    <a (click)="onLogout()">Logout</a>
+  
+  </div>
+
+<div class="content" >
+  
+  <div class="row"  >
+  <div class="col col-lg-6 col-md-6 col-sm-12">
+    <mat-card>
+      <mat-card-header>
+        Total Registered Users
+      </mat-card-header>
+      <mat-card-content *ngIf="allusers">
+        <h3>{{allusers}}</h3>
+        <!--<canvas  id="pieChart" width="400" height="400"></canvas>-->
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col col-lg-6 col-md-6 col-sm-12">
+    <mat-card>
+      <mat-card-header>
+        Total Verified Users
+
+      </mat-card-header>
+      <mat-card-content *ngIf="verifieduser">
+       <h3> {{verifieduser}}</h3>
+        <!--<canvas id="myChart" width="400" height="400"></canvas>-->
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col col-lg-6 col-md-6 col-sm-12">
+    <mat-card>
+      <mat-card-header>
+        Total UnVerified Users
+      </mat-card-header>
+      <mat-card-content *ngIf="unverified">
+      <h3> {{unverified}}</h3>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col col-lg-6 col-md-6 col-sm-12">
+    <mat-card>
+      <mat-card-header>
+        Total Ads
+      </mat-card-header>
+      <mat-card-content>
+       <h3> {{totalPosts}}</h3>
+       <!-- <canvas id="linechart" width="400" height="400"  ></canvas>-->
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col col-lg-6 col-md-6 col-sm-12">
+    <mat-card>
+      <mat-card-header>
+        Total finalized deals through system
+      </mat-card-header>
+      <mat-card-content>
+       <h3> {{finalizedcontracts}}</h3>
+       <!-- <canvas id="linechart" width="400" height="400"  ></canvas>-->
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col col-lg-6 col-md-6 col-sm-12">
+    <mat-card>
+      <mat-card-header> 
+        Pending deals through system
+      </mat-card-header>
+      <mat-card-content>
+       <h3> {{pendingcontracts}}</h3>
+       <!-- <canvas id="linechart" width="400" height="400"  ></canvas>-->
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <!--
+  <div class="row">
+   
+    <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <mat-card>
+        <canvas  id="pieChart" width="500px" height="500px"></canvas>
+      </mat-card>
+         
+    </div>
+  </div>
+  -->
+
+    </div>
+  </div>
+</div>

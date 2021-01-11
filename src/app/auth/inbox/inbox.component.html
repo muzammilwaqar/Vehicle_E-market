@@ -1,0 +1,215 @@
+
+
+<div class="header_style_wrapper">
+
+  <!-- Begin top bar -->
+  <div class="above_top_bar">
+   <div class="page_content_wrapper">
+
+       <div class="social_wrapper">
+           <ul><!--social links-->
+               <li class="facebook" *ngIf="userIsAuthenticated">
+                 <a  routerLink="/userprofile" routerLinkActive="mat-accent">
+                   Profile
+                 </a>
+               </li>
+               <li class="facebook" *ngIf="!userIsAuthenticated">
+                 <a  routerLink="/auth/login" routerLinkActive="mat-accent">
+                   Login
+                 </a>
+               </li>
+               <li class="facebook" *ngIf="!userIsAuthenticated">
+                 <a >
+                   |
+                 </a>
+               </li>
+               <li class="facebook" *ngIf="!userIsAuthenticated">
+                 <a  routerLink="/auth/signup" routerLinkActive="mat-accent">
+                   Sign Up
+                 </a>
+               </li>
+               <li class="facebook" *ngIf="userIsAuthenticated && approve == true ">
+                <a  routerLink="/auth/admin" routerLinkActive="mat-accent">
+                  Admin
+                </a>
+              </li>
+               <li class="facebook" *ngIf="userIsAuthenticated">
+                 <a  routerLink="" (click)="onLogout()" >
+                   Logout
+                 </a>
+               </li>
+           </ul>
+       </div>
+       <div class="top_contact_info">
+           <div class="company_address">
+               <div id="top_contact_address"><span class="ti-location-pin"></span>2 Floor Pak Plaza Double Road PWD</div>
+           </div>
+           <div>
+               <div id="top_contact_number"><a href="tel:+92-335-5423119"><span class="ti-mobile"></span>+92-335-5423119</a></div>
+           </div>
+           <div>
+               <div id="top_contact_hours"><span class="ti-alarm-clock"></span>Mon-Fri 09.00 - 17.00 </div>
+           </div>
+       </div>
+       <br class="clear" />
+   </div>
+</div>
+<!-- End top bar -->
+
+
+<!--Responsive nav bar start-->
+
+<div class="nav">
+ <input type="checkbox" id="nav-check">
+ <div class="nav-header">
+   <div class="nav-title">
+     V.E.M.B
+   </div>
+ </div>
+ <div class="nav-btn">
+   <label for="nav-check">
+     <span></span>
+     <span></span>
+     <span></span>
+   </label>
+ </div>
+
+ <div class="nav-links" style="float: right;margin-left: 50%;">
+   <a routerLink="/" style="margin-left:10px;" >Home</a>
+   <a routerLink="/posts" >Cars</a>
+   <a routerLink="/about">About Us</a>
+   <a routerLink="/contactus">Contact Us</a>
+   <a routerLink="/faq">F.A.Q</a>
+
+   <a routerLink="/inbox">Inbox</a>
+   <button routerLink="/create" routerLinkActive="mat-accent" style="background-color: #27b803; border:0; color: #ffffff;  height:34px; border-radius: 50px 50px 50px 50px; width:140px;padding-top: 5px;padding-bottom:5px;">Sell Your Car</button>
+ </div>
+</div>
+
+<!--Responsive nav bar end-->
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<!--Header ends-->
+<!--Main content starts-->
+<div style="margin-top:7rem;" class="screen_fit">
+  <mat-card class="inbox_card" >
+    <mat-card-title>
+      <h2>Messenger</h2>
+    </mat-card-title>
+    <mat-card-subtitle *ngIf="users">
+     Total Chats {{users.length}}
+    </mat-card-subtitle>
+    <mat-card-content>
+
+      <mat-card class="chat_card" (click)="onchat(user._id)" *ngFor="let user of users" >
+
+        <mat-card-content>
+          <table class="chat_table">
+            <tr>
+              <td style="float:left;border:none;">
+                
+                <img [src]="user.profileimage" width="50px" height="50px" style="  border-radius: 50%;">
+                
+              
+             
+              </td>
+              <td style="float:left;border:none;">
+                <h2 >{{user.fullName}}</h2>
+              </td>
+              <td style="float:right;border:none;">
+                <a class="profile_button" color="primary" mat-button (click)="onview(user._id)">Profile</a>
+                <!--<a class="chat_button" mat-button (click)="onchat(user._id)">Chat</a>-->
+                <a class="chat_button_delete" mat-button (click)="ondelete(user._id)">Delete</a>
+              </td>
+            </tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+<!--main content ends-->
+
+
+<!--footer starts-->
+
+<div class="laptop">
+
+<div id="footer" class="" style=" margin-top:3rem;">
+  <ul class="sidebar_widget three">
+      <li id="text-2" class="widget widget_text">
+          <h2 class="widgettitle">About Us</h2>
+          <div class="textwidget">
+              <p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience. </p>
+              <!--put logo-->
+              <!--<p><img src="../../assets/images/logo@2x_white.png" alt="" width="175" height="24"></p>-->
+          </div>
+      </li>
+      <li id="text-3" class="widget widget_text">
+          <h2 class="widgettitle">Contact Info</h2>
+          <div class="textwidget">
+              <p><span class="ti-mobile" style="margin-right:10px;"></span>+92-335-5423119</p>
+              <p><span class="ti-location-pin" style="margin-right:10px;"></span>2 Floor Pak Plaza Main Pwd Double </p>
+              <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</p>
+              <div style="margin-top:20px;">
+                  <div class="social_wrapper shortcode dark ">
+                      <ul><!--Social Links-->
+                          <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                          <li class="twitter"><a target="_blank" title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                          <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                          <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                      </ul>
+                  </div> 
+              </div>
+          </div>
+      </li>
+      <li id="mc4wp_form_widget-5" class="widget widget_mc4wp_form_widget">
+          <h2 class="widgettitle">Newsletter</h2>
+
+          <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-27" method="post" data-id="27" data-name="Newsletter">
+              <div class="mc4wp-form-fields">Don't miss a thing! Sign up to receive daily deals
+
+                  <input type="email" name="EMAIL" placeholder="Your Email Address" required />
+                  <br/>
+                  <input type="submit" value="Subscribe" />
+              </div>
+              <label style="display: none !important;">Leave this field empty if you're human:
+                  <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+              </label>
+
+              <div class="mc4wp-response"></div>
+          </form>
+      </li>
+  </ul>
+</div>
+<div class="footer_bar  ppb_wrapper  " >
+
+  <div class="footer_bar_wrapper ">
+      <div class="menu-footer-menu-container">
+        <ul id="footer_menu" class="footer_nav">
+          <li class="menu-item"><a routerLink="/about">About Us</a></li>
+          <li class="menu-item"><a routerLink="/posts">Cars</a></li>
+          <li class="menu-item"><a routerLink="/faq">FAQs</a></li>
+          <li class="menu-item"><a routerLink="/contactus">Contact Us</a></li>
+      </ul>
+      </div>
+      <div id="copyright">© Copyright V.E.M.B</div>
+     
+  </div>
+  </div>
+  
+
+</div>

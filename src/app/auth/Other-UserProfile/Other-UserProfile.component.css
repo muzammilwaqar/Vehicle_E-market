@@ -1,0 +1,476 @@
+
+.mat-form-field
+{
+  width: 100%;
+}
+.mat-label
+{
+  padding-left: 5px;
+}
+mat-spinner
+{
+  margin: auto;
+}
+input[type="file"]
+{
+  visibility: hidden;
+}
+
+.image-preview
+{
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.image-preview img
+{
+  height: 100%;
+}
+.submitButton
+{
+  margin-left: 25%;
+  width: 50%;
+}
+.maindiv
+
+
+mat-grid-tile {
+  background: #fff;
+}
+input[type="radio"]
+{
+  visibility: hidden;
+}
+.accountStatus-radio-group
+{
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.accountStatus-radio-button
+ {
+  margin: 5px;
+}
+
+
+
+
+.accountStatus
+{
+  visibility: hidden;
+  height: 1px;
+
+}
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 5px;
+}
+mat-card-header
+{
+  padding-bottom: 15px;
+  align-content: right;
+  padding-left: 80%;
+  height: 120px;
+}
+.user-details
+{
+  margin-top: 2rem;
+}
+.example-header-image {
+
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+.pie-chart-btn
+{
+  margin-left: 5px;
+}
+.edit-btn
+{
+
+  float: center;
+ margin-bottom: 7px;
+ margin-right: 5px;
+}
+.delete-btn
+{
+  float: left;
+  margin-bottom: 7px;
+  margin-right: 5px;
+}
+.bar-chart-btn
+{
+  margin-left:5px;
+
+}
+.report-card
+{
+  margin-bottom:5rem;
+  margin-top:2rem;
+}
+
+.showfield
+ {
+  /*border:1px solid rgb(173, 172, 172);*/
+  border-radius: 50px 50px 50px 50px;
+  padding: 5px;
+  width: 50%;
+  background-color:rgb(226, 226, 226);
+  padding-left:8px;
+ }
+ .showfield b
+ {
+   margin: 5px;
+ }
+
+
+ /**/
+/*
+ .item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #dae0e4;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(230, 217, 217, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+*/
+
+@media (min-width: 768px) {
+  /* show 3 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+
+
+
+.accept_button
+{
+  border-radius: 15px;
+  background-color: #27b803;
+  color: white;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing:1px;
+  width: 7rem;
+  height:2.5rem;
+  margin-bottom: 1.5px;
+}
+.accept_button:hover
+{
+  border-radius: 15px;
+  background-color: rgb(243, 243, 243);
+  color:#27b803;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing:1px;
+  border: 1px solid #27b803;
+}
+.reject_button
+{
+  margin-left: 2px;
+  background-color: #e70909;
+  color: white;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing:1px;
+  width: 7rem;
+  height:2.5rem;
+  margin-top: 1.5px;
+}
+.reject_button:hover
+{
+  color:#e70909;
+  background-color:rgb(241, 239, 239);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing:1px;
+  border: 1px solid #e70909;
+}
+@media (max-width:700px)
+{
+  .content
+  {
+    width: 100%;
+    margin-left:0;
+
+  }
+  #myImg
+  {
+    width: 250px;
+    height: 250px;
+  }
+  .userdetails_content
+  {
+    width: 100%;
+    margin-left:10px;
+  }
+  .showfield
+ {
+  /*border:1px solid rgb(173, 172, 172);*/
+  margin-left: 4rem;
+  border-radius: 50px 50px 50px 50px;
+  width: 80%;
+  background-color: transparent;
+
+ }
+ .user-details
+ {
+   width: 110%;
+   margin-left: 5px;
+ }
+ .example-header-image
+ {
+   margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+ }
+ .contracts
+ {
+  width: 100%;
+  margin-left: 15px;
+ }
+ .seller_contracts
+ {
+  width: 100%;
+  margin-left: 5px;
+ }
+ .buyer_contracts
+ {
+  width: 100%;
+  margin-left: 5px;
+ }
+ .seller_contracts mat-card-title
+ {
+  width: 100%;
+  margin-left: 5px;
+ }
+ mat-card-title
+ {
+   width: 100%;
+   margin-left: 5rem;
+ }
+}
+/*review css*/
+
+.container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 16px 0
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+
+/*nav*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #000000;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  margin-left:50%;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}

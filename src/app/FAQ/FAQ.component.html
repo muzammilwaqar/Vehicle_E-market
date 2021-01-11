@@ -1,0 +1,316 @@
+
+
+<div class="home page-template-default page page-id-3075 woocommerce-no-js ppb_enable responsive-media container-fluid"
+style="width: 126.5%; margin-left: -10.5rem;">
+
+
+ 
+
+  <input type="hidden" id="pp_menu_layout" name="pp_menu_layout" value="leftalign" />
+  <input type="hidden" id="pp_enable_right_click" name="pp_enable_right_click" value="0" />
+  <input type="hidden" id="pp_enable_dragging" name="pp_enable_dragging" value="0" />
+  <input type="hidden" id="pp_image_path" name="pp_image_path" value="http://themes.themegoods.com/grandcarrental/demo/wp-content/themes/grandcarrental/images/" />
+  <input type="hidden" id="pp_homepage_url" name="pp_homepage_url" value="index.html" />
+  <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1" />
+  <input type="hidden" id="tg_smart_fixed_menu" name="tg_smart_fixed_menu" value="0" />
+  <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1" />
+  <input type="hidden" id="pp_topbar" name="pp_topbar" value="1" />
+  <input type="hidden" id="post_client_column" name="post_client_column" value="4" />
+  <input type="hidden" id="pp_back" name="pp_back" value="Back" />
+  <input type="hidden" id="pp_page_title_img_blur" name="pp_page_title_img_blur" value="" />
+  <input type="hidden" id="tg_portfolio_filterable_link" name="tg_portfolio_filterable_link" value="" />
+  <input type="hidden" id="tg_flow_enable_reflection" name="tg_flow_enable_reflection" value="" />
+  <input type="hidden" id="tg_lightbox_skin" name="tg_lightbox_skin" value="metro-black" />
+  <input type="hidden" id="tg_lightbox_thumbnails" name="tg_lightbox_thumbnails" value="horizontal" />
+  <input type="hidden" id="tg_lightbox_thumbnails_display" name="tg_lightbox_thumbnails_display" value="1" />
+  <input type="hidden" id="tg_lightbox_opacity" name="tg_lightbox_opacity" value="0.8" />
+  <input type="hidden" id="tg_cart_url" name="tg_cart_url" value="http://themes.themegoods.com/grandcarrental/demo/cart/" />
+  <input type="hidden" id="tg_live_builder" name="tg_live_builder" value="0" />
+  <input type="hidden" id="pp_footer_style" name="pp_footer_style" value="3" />
+
+
+
+<!-- Begin template wrapper -->
+<div id="wrapper" class="hasbg transparent">
+
+  <div class="header_style_wrapper">
+
+    <!-- Begin top bar -->
+    <div class="above_top_bar">
+        <div class="page_content_wrapper">
+
+            <div class="social_wrapper">
+                <ul><!--social links-->
+                    <li class="facebook" *ngIf="userIsAuthenticated">
+                      <a  routerLink="/userprofile" routerLinkActive="mat-accent">
+                        Profile
+                      </a>
+                    </li>
+                    <li class="facebook" *ngIf="!userIsAuthenticated">
+                      <a  routerLink="/auth/login" routerLinkActive="mat-accent">
+                        Login
+                      </a>
+                    </li>
+                    <li class="facebook" *ngIf="!userIsAuthenticated">
+                      <a >
+                        |
+                      </a>
+                    </li>
+                    <li class="facebook" *ngIf="!userIsAuthenticated">
+                      <a  routerLink="/auth/signup" routerLinkActive="mat-accent">
+                        Sign Up
+                      </a>
+                    </li>
+                    <li class="facebook" *ngIf="userIsAuthenticated && approve == true ">
+                      <a  routerLink="/auth/admin" routerLinkActive="mat-accent">
+                        Admin
+                      </a>
+                    </li>
+                    <li class="facebook" *ngIf="userIsAuthenticated">
+                      <a  routerLink="" (click)="onLogout()" >
+                        Logout
+                      </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="top_contact_info">
+                <div class="company_address">
+                    <div id="top_contact_address"><span class="ti-location-pin"></span>2 Floor Pak Plaza Double Road PWD</div>
+                </div>
+                <div>
+                    <div id="top_contact_number"><a href="tel:+92-335-5423119"><span class="ti-mobile"></span>+92-335-5423119</a></div>
+                </div>
+                <div>
+                    <div id="top_contact_hours"><span class="ti-alarm-clock"></span>Mon-Fri 09.00 - 17.00 </div>
+                </div>
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+    <!-- End top bar -->
+    <!--Responsive nav bar start-->
+
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          V.E.M.B
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links">
+        <a routerLink="/" style="margin-left:10px;" >Home</a>
+        <a routerLink="/posts" >Cars</a>
+        <a routerLink="/about">About Us</a>
+        <a routerLink="/contactus">Contact Us</a>
+        <a routerLink="/faq">F.A.Q</a>
+        <a routerLink="/inbox">Inbox</a>
+        <button routerLink="/create" routerLinkActive="mat-accent" style="background-color: #27b803; border:0; color: #ffffff;  height:34px; border-radius: 50px 50px 50px 50px; width:140px;padding-top: 5px;padding-bottom:5px;">Sell Your Car</button>
+     
+      </div>
+    </div>
+
+  <!--Responsive nav bar end-->
+  </div>
+
+<div class="screen_fit">
+
+  <div id="page_caption" class="hasbg parallax  withtopbar screen_fit  " style="background-image:url(../../assets/web-image-asset/pexels/pexels-simon-robben-340779.jpg);">
+
+      <div class="page_title_wrapper">
+          <div class="page_title_inner">
+              <div class="page_title_content">
+                  <h1 class="withtopbar">FAQs</h1>
+                  <div class="page_tagline">
+                      We Hope Your Question is Answered here If not head over to contact Us and send an email to us.</div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+  <!-- Begin content -->
+  <div class="mobile_responsive_content ">
+  <div id="page_content_wrapper" class="hasbg withtopbar ">
+      <div class="inner">
+
+          <!-- Begin main content -->
+          <div class="inner_wrapper">
+
+              <div class="sidebar_content full_width nopadding">
+                  <div class="sidebar_content page_content">
+                      <h2>Genral</h2>
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                             What Is V.E.M.B?
+                          </mat-expansion-panel-header>
+                          <p>An E market for Buyer and Seller to communicate and Sell or Buy their Cars.</p>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                             How It Works?
+                          </mat-expansion-panel-header>
+                          <p>You have to signup to use this platform. After You have signup by providing required details you will be redirected to home page. However, you cannot Chat or Post an Add Yet. It can only be Done Once User has been pproved by the Admin </p>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                             Why Do I need To provide My CNIC Number And Picture?
+                          </mat-expansion-panel-header>
+                          <p>You Need to provide your cnic number and cnic front side image "clear image" to get yourself verified in order to use this platform. Only verified users are allowed to use this platform </p>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                             What is Private Key?
+                          </mat-expansion-panel-header>
+                          <p>As Our System highly focus on security, This private key is your accesesability to all working. If you forgot Your password or have to complete a deal you will need this private key. Make Sure to Write/save it and keep it save from everyone.</p>
+                        </mat-expansion-panel>
+                      <h2>Payment</h2>
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                             How does V.E.M.B Manages Payments?
+                          </mat-expansion-panel-header>
+                          <p>As of now 2020, V.E.M.B does not deal or manage payments for their users. You will have to deal manually in terms of Payments </p>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                             Is thier Paid Adsvertisements Available?
+                          </mat-expansion-panel-header>
+                          <p>No, This is a free platform as for now 2020, No paid Advertising is entertained for the User's of this platform.</p>
+                        </mat-expansion-panel>
+
+
+                        <p class="break_heading"></p>
+                      <h2>Working</h2>
+
+                      <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                          Does V.E.M.B provide Car Check Services?
+                        </mat-expansion-panel-header>
+                        <p>An on demand service will be launching soon where the user can book the car for check by V.E.M.B administration.</p>
+                      </mat-expansion-panel>
+
+
+
+                  </div>
+
+                  <div class="sidebar_wrapper">
+                      <div class="sidebar">
+
+                          <div class="content">
+
+                              <ul class="sidebar_widget">
+
+                                  <li id="text-6" class="widget widget_text">
+                                      <h2 class="widgettitle">For More Informations</h2>
+                                      <div class="textwidget">
+                                          <p><span class="ti-mobile" style="margin-right:10px;"></span>+92 335 5423119
+                                              <br />
+                                              <br />
+                                              <span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00</p>
+                                      </div>
+                                  </li>
+                              </ul>
+
+                          </div>
+
+                      </div>
+                      <br class="clear" />
+                  </div>
+              </div>
+
+          </div>
+          <!-- End main content -->
+      </div>
+  </div>
+</div>
+
+<p style="height: 45px;">
+
+</p>
+
+
+
+
+
+
+
+
+
+
+<div class="screen_fit">
+    <div id="footer" class=" ppb_wrapper screen_fit" >
+      <ul class="sidebar_widget three">
+          <li id="text-2" class="widget widget_text">
+              <h2 class="widgettitle">About Us</h2>
+              <div class="textwidget">
+                  <p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience. </p>
+                  <!--put logo-->
+                  <!--<p><img src="../../assets/images/logo@2x_white.png" alt="" width="175" height="24"></p>-->
+              </div>
+          </li>
+          <li id="text-3" class="widget widget_text">
+              <h2 class="widgettitle">Contact Info</h2>
+              <div class="textwidget">
+                  <p><span class="ti-mobile" style="margin-right:10px;"></span>+92-335-5423119</p>
+                  <p><span class="ti-location-pin" style="margin-right:10px;"></span>2 Floor Pak Plaza Main Pwd Double </p>
+                  <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</p>
+                  <div style="margin-top:20px;">
+                      <div class="social_wrapper shortcode dark ">
+                          <ul><!--Social Links-->
+                              <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li class="twitter"><a target="_blank" title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                              <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                              <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li id="mc4wp_form_widget-5" class="widget widget_mc4wp_form_widget">
+              <h2 class="widgettitle">Newsletter</h2>
+
+              <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-27" method="post" data-id="27" data-name="Newsletter">
+                  <div class="mc4wp-form-fields">Don't miss a thing! Sign up to receive daily deals
+
+                      <input type="email" name="EMAIL" placeholder="Your Email Address" required />
+                      <br/>
+                      <input type="submit" value="Subscribe" />
+                  </div>
+                  <label style="display: none !important;">Leave this field empty if you're human:
+                      <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+                  </label>
+
+                  <div class="mc4wp-response"></div>
+              </form>
+          </li>
+      </ul>
+  </div>
+</div>
+  <div class="footer_bar  ppb_wrapper  screen_fit">
+
+    <div class="footer_bar_wrapper ">
+        <div class="menu-footer-menu-container">
+          <ul id="footer_menu" class="footer_nav">
+            <li class="menu-item"><a routerLink="/about">About Us</a></li>
+            <li class="menu-item"><a routerLink="/posts">Cars</a></li>
+            <li class="menu-item"><a routerLink="/faq">FAQs</a></li>
+            <li class="menu-item"><a routerLink="/contactus">Contact Us</a></li>
+        </ul>
+        </div>
+        <div id="copyright">© Copyright V.E.M.B</div>
+        <br class="clear" />
+    </div>
+</div>
+
+</div>
+
+</div>

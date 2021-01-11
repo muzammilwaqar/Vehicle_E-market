@@ -1,0 +1,119 @@
+<!--<textarea rows="6" [value]="newPost" #postInput></textarea>-->
+<mat-card class="main-card" *ngIf="contract">
+  <mat-card-title  class="maintitle" >
+  Vehicle Transfer Contract Between "{{contract.SellerName}}" and "{{contract.BuyerName}}"
+ </mat-card-title>
+ <mat-card-subtitle class="mainsubtitle" >
+   This contract fills automatically and leaves Green feilds that are needed to be filled by buyer and seller
+ </mat-card-subtitle>
+    <form [formGroup]="submitform"  (submit)="onfinalizecontract()" *ngIf="!isloading">
+
+    <mat-card class="seller">
+      <mat-card-header class="main_heading">Seller Details</mat-card-header>
+      <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" value={{contract.SellerName}}  disabled="disabled">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput type="text"  value={{contract.SellerCNIC}} disabled="disabled">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input  class="needtofill" matInput type="text" formControlName="SellerPK"  placeholder="Seller Secret key">
+           </mat-form-field>
+
+      </mat-card-content>
+    </mat-card>
+
+
+    <mat-card >
+      <mat-card-header class="main_heading">
+        Buyer Detials
+      </mat-card-header>
+      <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" value={{contract.BuyerName}} disabled="disabled" >
+
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+           <input matInput type="text" value={{contract.BuyerCNIC}} disabled="disabled">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" >
+           <input  *ngIf="contract.BuyerPK != '' " style="background-color: #33db00;color:#ffffff;" class="needtofill" matInput type="text"  placeholder="Buyer Secret key is valid">
+          </mat-form-field>
+
+      </mat-card-content>
+    </mat-card>
+
+
+    <mat-card  class="car">
+      <mat-card-header class="main_heading">
+        Car Details
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input  matInput type="text" value={{contract.registrationnumber}} disabled="disabled">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input  matInput type="text" value={{contract.price}} disabled="disabled">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" value={{contract.make}} disabled="disabled">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" value={{contract.model}} disabled="disabled">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" value={{contract.registrationcity}} disabled="disabled">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" value={{contract.enginetype}} disabled="disabled">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" value={{contract.enginecapacity}} disabled="disabled">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" value={{contract.transmission}} disabled="disabled">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" value={{contract.assembly}} disabled="disabled">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" value={{contract.exteriorcolor}} disabled="disabled">
+        </mat-form-field>
+
+
+
+      </mat-card-content>
+    </mat-card>
+
+
+    <mat-card class="transfer">
+      <mat-card-header class="main_heading">
+        Transfer Letter
+      </mat-card-header>
+      <mat-card-content>
+        <div class="image-preview" *ngIf="contract.imagePath !== '' && contract.imagePath ">
+          <img [src]="contract.imagePath" [alt]="contract.make">
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+<br>
+
+    <button class="submit_button" mat-raised-button color="accent" type="submit">Submit To BlockChain</button>
+  </form>
+</mat-card>
+

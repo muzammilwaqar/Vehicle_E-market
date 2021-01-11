@@ -1,0 +1,94 @@
+
+<mat-spinner *ngIf="isloading"></mat-spinner>
+
+<div class="container" style=" width:125.6; margin-left:-10.2rem;">
+  <div class="sidebar">
+    <a routerLink='/auth/admin'>Home</a>
+    <a routerLink='/auth/create-admin'>Create Admin</a>
+    <a routerLink='/auth/allusers'>All Users</a>
+    <a routerLink='/auth/unverified' >Unverified Users</a>
+    <a routerLink='/auth/verified'>Verified Users</a>
+    <a routerLink="/create">Post and Ad</a>
+    <a routerLink="/userprofile">Profile</a>
+    <a routerLink="/">Main Web</a>
+    <a (click)="onLogout()">Logout</a>
+  
+  </div>
+
+  <div class="content" >
+    <div class="row" style="margin-top: 7.8rem;" >
+      <div class="limiter">
+        <div class="container-table100">
+          <div class="wrap-table100">
+            <div class="table100">
+              <table>
+                <thead>
+                  <tr class="table100-head">
+                    <th class="column1">Full Name</th>
+                    <th class="column2">CNIC</th>
+                    <th class="column3">Email</th>
+                    <th class="column4">Phone</th>
+
+                    <th class="column6">Action</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let user of allusers">
+                    <tr>
+                      <td class="column1">{{user.fullName}} </td>
+                      <td class="column2">{{user.cnicNumber}}</td>
+                      <td class="column3">{{user.email}}</td>
+                      <td class="column4">{{user.phoneNumber}}</td>
+
+                      <td class="column5">
+                        <a mat-flat-button color="primary" (click)="ondisbale(user.cnicNumber)"  > Disable </a>
+                        <button mat-flat-button color="warn" (click)="onDelete(user.cnicNumber)" > DELETE </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <mat-paginator [length]="allusers" [pageSize]="allusers" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)" *ngIf="allusers.length>0">
+        </mat-paginator>
+
+        <p class="info-text mat-body-1" *ngIf="allusers.length<=0 && !isloading">No Posts Availables.!</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--
+<mat-card>
+<mat-accordion multi="true" *ngIf="unverifiedUsers.length>0 && !isloading">
+  <mat-expansion-panel *ngFor="let user of unverifiedUsers">
+
+    <mat-expansion-panel-header>
+    <p><b> Full Name: </b>- {{user.fullName}}  <b>CNIC:</b> {{user.cnicNumber}}</p>
+
+    </mat-expansion-panel-header>
+    <p> Email: {{user.email}}</p>
+    <p> PhoneNumber: {{user.phoneNumber}}</p>
+
+    <p> Address: {{user.fullAddress}}</p>
+    <p> Date of Birth: {{user.dob}}</p>
+
+
+    <mat-action-row >
+
+      <a mat-flat-button color="primary" (click)="onApprove(user.cnicNumber)"  > Approve </a>
+      <button mat-flat-button color="warn" (click)="onDelete(user.cnicNumber)" > DELETE </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-paginator [length]="totalUnverifiedUsers" [pageSize]="unverifiedUsersPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)" *ngIf="unverifiedUsers.length>0">
+</mat-paginator>
+
+<p class="info-text mat-body-1" *ngIf="unverifiedUsers.length<=0 && !isloading">No Posts Availables.!</p>
+</mat-card>
+</div>
+</div>
+-->

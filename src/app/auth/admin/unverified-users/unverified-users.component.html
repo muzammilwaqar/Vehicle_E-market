@@ -1,0 +1,85 @@
+
+<mat-spinner *ngIf="isloading"></mat-spinner>
+
+
+<div class="container container-fluid" style=" width:125.6; margin-left:-10.2rem;">
+  <div class="sidebar">
+    <a routerLink='/auth/admin'>Home</a>
+    <a routerLink='/auth/create-admin'>Create Admin</a>
+    <a routerLink='/auth/allusers'>All Users</a>
+    <a routerLink='/auth/unverified' >Unverified Users</a>
+    <a routerLink='/auth/verified'>Verified Users</a>
+    <a routerLink="/create">Post and Ad</a>
+    <a routerLink="/userprofile">Profile</a>
+    <a routerLink="/">Main Web</a>
+    <a (click)="onLogout()">Logout</a>
+  
+  </div>
+  <div class="content" >
+    <div class="row" style="margin-top:3rem; margin-left:5rem; width: 12.5.6% ;" >
+
+      <mat-accordion multi="true" *ngIf="unverifiedUsers.length>0 && !isloading" style="width:125.6%">
+        <mat-expansion-panel *ngFor="let user of unverifiedUsers">
+
+          <mat-expansion-panel-header>
+            <p><b>Full Name: </b>{{user.fullName}} - <b>    CNIC:</b> {{user.cnicNumber}}</p>
+
+          </mat-expansion-panel-header>
+          <p>Email: {{user.email}}</p>
+          <p>PhoneNumber: {{user.phoneNumber}}</p>
+
+          <p>Address: {{user.fullAddress}}</p>
+          <p>Date of Birth: {{user.dob}}</p>
+
+          <div class="post-image">
+            <!--<img [src]="user.imagePath" [alt]="user.fullName" width="350px" height="250px">-->
+            <img id="myImg" [src]="user.imagePath" [alt]="user.fullName" style="width:100%;max-width:300px">
+
+            <!-- The Modal -->
+
+
+          </div>
+          <mat-action-row >
+            <!--*ngIf="userIsAuthenticated && userId === user.creator"-->
+            <a mat-flat-button color="primary" (click)="onApprove(user.cnicNumber)"  > Approve</a>
+            <button mat-flat-button color="warn" (click)="onDelete(user.cnicNumber)" >DELETE</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+
+    </div>
+    <mat-paginator [length]="totalUnverifiedUsers" [pageSize]="unverifiedUsersPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)" *ngIf="unverifiedUsers.length>0">
+
+    </mat-paginator>
+    <h2 class="info-text mat-body-1" *ngIf="unverifiedUsers.length<=0 && !isloading" style="font-size:22px; letter-spacing: 1.5px;word-spacing: 1.5px;margin-left:5rem;;">No Pending Request Right Now</h2>
+  </div>
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+</div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  </script>

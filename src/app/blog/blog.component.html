@@ -1,0 +1,372 @@
+<a id="close_mobile_menu" href="javascript:;"></a>
+
+  <div class="mobile_menu_wrapper">
+      <a id="mobile_menu_close" href="javascript:;" class="button"><span class="ti-close"></span></a>
+
+      <div class="mobile_menu_content">
+
+          <div class="menu-main-menu-container">
+              <ul id="mobile_main_menu" class="mobile_main_nav">
+                  <li class="menu-item current-menu-item menu-item-has-children"><a routerLink="/">Home</a>
+                  </li>
+                  <li class="menu-item menu-item-has-children"><a routerLink="/posts">Cars</a>
+                  </li> 
+                  <li class="menu-item menu-item-has-children"><a href="about-us.html">About Us</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="faqs.html">FAQs</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="blog-left-sidebar.html">Blog</a>
+                  </li>
+              </ul>
+          </div>
+
+          <!-- Begin side menu sidebar -->
+          <div class="page_content_wrapper">
+              <div class="sidebar_wrapper">
+                  <div class="sidebar">
+
+                      <div class="content">
+
+                          <ul class="sidebar_widget">
+                              <li id="text-8" class="widget widget_text">
+                                  <h2 class="widgettitle">For More Informations</h2>
+                                  <div class="textwidget"><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227
+                                      <br/>
+                                      <span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 </div>
+                              </li>
+                          </ul>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          <!-- End side menu sidebar -->
+
+          <div class="social_wrapper">
+              <ul><!--social links-->
+                  <li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook-official"></i></a></li>
+                  <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                  <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                  <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+<div class="header_style_wrapper">
+
+  <!-- Begin top bar -->
+  <div class="above_top_bar">
+      <div class="page_content_wrapper">
+
+          <div class="social_wrapper">
+              <ul><!--social links-->
+                  <li class="facebook" *ngIf="userIsAuthenticated">
+                    <a  routerLink="/userprofile" routerLinkActive="mat-accent">
+                      Profile
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a  routerLink="/auth/login" routerLinkActive="mat-accent">
+                      Login
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a >
+                      |
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a  routerLink="/auth/signup" routerLinkActive="mat-accent">
+                      Sign Up
+                    </a>
+                  </li>
+
+                  <li class="facebook" *ngIf="userIsAuthenticated">
+                    <a  routerLink="" (click)="onLogout()" >
+                      Logout
+                    </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="top_contact_info">
+              <div class="company_address">
+                  <div id="top_contact_address"><span class="ti-location-pin"></span>2 Floor Pak Plaza Double Road PWD</div>
+              </div>
+              <div>
+                  <div id="top_contact_number"><a href="tel:+92-335-5423119"><span class="ti-mobile"></span>+92-335-5423119</a></div>
+              </div>
+              <div>
+                  <div id="top_contact_hours"><span class="ti-alarm-clock"></span>Mon-Fri 09.00 - 17.00 </div>
+              </div>
+          </div>
+          <br class="clear" />
+      </div>
+  </div>
+  <!-- End top bar -->
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        V.E.M.B
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a routerLink="/" style="margin-left:10px;" >Home</a>
+      <a routerLink="/posts" >Cars</a>
+      <a routerLink="/about">About Us</a>
+      <a routerLink="/contactus">Contact Us</a>
+      <a routerLink="/faq">F.A.Q</a>
+      <a routerLink="/inbox">Inbox</a>
+      <button routerLink="/create" routerLinkActive="mat-accent" style="background-color: #27b803; border:0; color: #ffffff;  height:34px; border-radius: 50px 50px 50px 50px; width:140px;padding-top: 5px;padding-bottom:5px;">Sell Your Car</button>
+   
+    </div>
+  </div>
+</div>
+
+<!--main content Starts-->
+
+<div id="page_caption" class="hasbg parallax  withtopbar  blog_wrapper" style="background-image:url(../../assets/web-image-asset/unsplash/chuttersnap-gts_Eh4g1lk-unsplash.jpg); width:125.6%;margin-left: -10rem; margin-top: 7.2rem;">
+
+  <div class="page_title_wrapper">
+      <div class="page_title_inner">
+          <div class="page_title_content">
+              <h1 class="withtopbar">Blog Vehicle E-Market</h1>
+              <div class="page_tagline">
+                We bring You Every New Update To your Profile.
+              </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+
+<!-- Begin content -->
+<div id="page_content_wrapper" class="hasbg withtopbar blog_wrapper" style="width:125.6%;margin-left: -10rem;">
+  <div class="inner">
+
+      <!-- Begin main content -->
+      <div class="inner_wrapper">
+
+          <div class="page_content_wrapper"></div>
+
+          <div class="sidebar_content left_sidebar">
+
+              <!-- Begin each blog post -->
+              <div id="post-18" class="post-18 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-accident tag-car-rental tag-tips">
+
+                  <div class="post_wrapper">
+
+                      <div class="post_content_wrapper">
+
+                          <div class="post_img static">
+                              <a routerLink="/singleblog">
+                                  <img width="960" height="636" src="../../assets/web-image-asset/blog-images/Inkedcr_LI-750x428.jpg" class="attachment-grandcarrental-blog size-grandcarrental-blog wp-post-image" alt="" /> </a>
+                          </div>
+
+                          <div class="post_header_wrapper">
+                              <div class="post_header">
+                                  <div class="post_detail single_post">
+                                      <span class="post_info_date">
+                      <a routerLink="/singleblog" title="What To Do if Your Rental Car Has Met With An Accident">Oct 29, 2020</a>
+                  </span>
+                                      <span class="post_info_comment">
+                      •
+                      <a href="##respond">
+                          0&nbsp;Comment                              </a>
+                  </span>
+                                  </div>
+                                  <div class="post_header_title">
+                                      <h3><a routerLink="/singleblog" title="What To Do if Your Rental Car Has Met With An Accident">Corolla 1.3 XLi 2006 Vs. Altis 1.8- Budget Review</a></h3>
+                                  </div>
+                              </div>
+
+                              <br class="clear" />
+
+                              <p>In the budget car review series, we will discuss the Corolla 1.3 XLi, 2006 model and 1800cc Corolla Altis. This 10th generation car by Toyota was launched in Pakistan in 2002 till 2008. From 1994 to 2002, [&hellip;]</p>
+                              <div class="post_button_wrapper">
+                                  <a class="readmore" routerLink="/singleblog">Read More<span class="ti-angle-right"></span></a>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div>
+              <br class="clear" />
+              <!-- End each blog post -->
+
+
+
+
+
+
+
+
+          </div>
+
+          <div class="sidebar_wrapper left_sidebar">
+
+              <div class="sidebar_top"></div>
+
+              <div class="sidebar">
+
+                  <div class="content">
+
+                      <ul class="sidebar_widget">
+                          <li id="mc4wp_form_widget-4" class="widget widget_mc4wp_form_widget">
+                              <h2 class="widgettitle">Newsletter</h2>
+
+                              <!-- MailChimp for WordPress v4.2.5 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
+                              <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-27" method="post" data-id="27" data-name="Newsletter">
+                                  <div class="mc4wp-form-fields">Don't miss a thing! Sign up to receive daily deals
+
+                                      <input type="email" name="EMAIL" placeholder="Your Email Address" required />
+                                      <br/>
+                                      <input type="submit" value="Subscribe" />
+                                  </div>
+                                  <label style="display: none !important;">Leave this field empty if you're human:
+                                      <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+                                  </label>
+                                  <div class="mc4wp-response"></div>
+                              </form>
+                              <!-- / MailChimp for WordPress Plugin -->
+                          </li>
+                          <li id="grandcarrental_cat_posts-3" class="widget grandcarrental_Cat_Posts">
+                              <h2 class="widgettitle"><span>Rental Tips</span></h2>
+                              <ul class="posts blog withthumb ">
+                                  <li>
+                                      <div class="post_circle_thumb">
+                                          <a href="#"><img class="alignleft frame post_thumb" src="../../assets/web-image-asset/blog-images/Inkedcr_LI-750x428.jpg" alt="" /></a>
+                                      </div><a href="#">Corolla 1.3 XLi 2006 Vs. Altis 1.8- Budget Review</a>
+                                      <div class="post_attribute">Oct 29, 2020</div>
+                                  </li>
+                                  <li>
+                                      <div class="post_circle_thumb">
+                                          <a href="#"><img class="alignleft frame post_thumb" src="../../assets/web-image-asset/blog-images/bravo-750x430.jpg" alt="" /></a>
+                                      </div><a href="#">United Bravo Price Decreased After Dollar Comes Down</a>
+                                      <div class="post_attribute">Oct 29, 2020</div>
+                                  </li>
+                                  <li>
+                                      <div class="post_circle_thumb">
+                                          <a href="#"><img class="alignleft frame post_thumb" src="../../assets/web-image-asset/blog-images/toyota_logo_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_1792771_o.jpg" alt="" /></a>
+                                      </div><a href="#">Toyota Indus Reports Massive Profit Growth!</a>
+                                      <div class="post_attribute">Oct 29, 2020</div>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li id="grandcarrental_social_profiles_posts-4" class="widget grandcarrental_Social_Profiles_Posts">
+                              <h2 class="widgettitle">Connect to Us</h2>
+                              <div class="social_wrapper shortcode light small">
+                                  <ul>
+                                      <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                      <li class="twitter"><a target="_blank" title="Twitter" href="https://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
+                                      <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                                      <li class="pinterest"><a target="_blank" title="Pinterest" href="https://pinterest.com/#"><i class="fa fa-pinterest"></i></a></li>
+                                      <li class="instagram"><a target="_blank" title="Instagram" href="https://instagram.com/theplanetd"><i class="fa fa-instagram"></i></a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                      </ul>
+
+                  </div>
+
+              </div>
+              <br class="clear" />
+
+              <div class="sidebar_bottom"></div>
+          </div>
+
+      </div>
+      <!-- End main content -->
+
+  </div>
+</div>
+
+<!--Main content End-->
+
+<!--footer-->
+
+<p style="height: 45px;">
+
+</p>
+    <div id="footer" class=" ppb_wrapper" style="position: relative; width: 125.6%; margin-left:-10rem;">
+      <ul class="sidebar_widget three">
+          <li id="text-2" class="widget widget_text">
+              <h2 class="widgettitle">About Us</h2>
+              <div class="textwidget">
+                  <p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience. </p>
+                  <!--put logo-->
+                  <!--<p><img src="../../assets/images/logo@2x_white.png" alt="" width="175" height="24"></p>-->
+              </div>
+          </li>
+          <li id="text-3" class="widget widget_text">
+              <h2 class="widgettitle">Contact Info</h2>
+              <div class="textwidget">
+                  <p><span class="ti-mobile" style="margin-right:10px;"></span>+92-335-5423119</p>
+                  <p><span class="ti-location-pin" style="margin-right:10px;"></span>2 Floor Pak Plaza Main Pwd Double </p>
+                  <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</p>
+                  <div style="margin-top:20px;">
+                      <div class="social_wrapper shortcode dark ">
+                          <ul><!--Social Links-->
+                              <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li class="twitter"><a target="_blank" title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                              <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                              <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li id="mc4wp_form_widget-5" class="widget widget_mc4wp_form_widget">
+              <h2 class="widgettitle">Newsletter</h2>
+
+              <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-27" method="post" data-id="27" data-name="Newsletter">
+                  <div class="mc4wp-form-fields">Don't miss a thing! Sign up to receive daily deals
+
+                      <input type="email" name="EMAIL" placeholder="Your Email Address" required />
+                      <br/>
+                      <input type="submit" value="Subscribe" />
+                  </div>
+                  <label style="display: none !important;">Leave this field empty if you're human:
+                      <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+                  </label>
+
+                  <div class="mc4wp-response"></div>
+              </form>
+          </li>
+      </ul>
+  </div>
+  <div class="footer_bar  ppb_wrapper " style="position: relative; width: 125.6%; margin-left:-10rem;">
+
+    <div class="footer_bar_wrapper ">
+        <div class="menu-footer-menu-container">
+          <ul id="footer_menu" class="footer_nav">
+            <li class="menu-item"><a routerLink="/about">About Us</a></li>
+            <li class="menu-item"><a routerLink="/posts">Cars</a></li>
+            <li class="menu-item"><a routerLink="/faq">FAQs</a></li>
+            <li class="menu-item"><a routerLink="/contactus">Contact Us</a></li>
+        </ul>
+        </div>
+        <div id="copyright">© Copyright V.E.M.B</div>
+        <br class="clear" />
+    </div>
+  </div>

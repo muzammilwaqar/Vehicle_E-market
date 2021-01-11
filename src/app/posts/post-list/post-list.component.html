@@ -1,0 +1,317 @@
+
+
+
+<mat-spinner *ngIf="isloading"></mat-spinner>
+
+
+<a id="close_mobile_menu" href="javascript:;"></a>
+
+  <div class="mobile_menu_wrapper">
+      <a id="mobile_menu_close" href="javascript:;" class="button"><span class="ti-close"></span></a>
+
+      <div class="mobile_menu_content">
+
+          <div class="menu-main-menu-container">
+              <ul id="mobile_main_menu" class="mobile_main_nav">
+                  <li class="menu-item current-menu-item menu-item-has-children"><a routerLink="/">Home</a>
+                  </li>
+                  <li class="menu-item menu-item-has-children"><a routerLink="/posts">Cars</a>
+                  </li>
+                  <li class="menu-item menu-item-has-children"><a href="about-us.html">About Us</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="faqs.html">FAQs</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="blog-left-sidebar.html">Blog</a>
+                  </li>
+              </ul>
+          </div>
+
+          <!-- Begin side menu sidebar -->
+          <div class="page_content_wrapper">
+              <div class="sidebar_wrapper">
+                  <div class="sidebar">
+
+                      <div class="content">
+
+                          <ul class="sidebar_widget">
+                              <li id="text-8" class="widget widget_text">
+                                  <h2 class="widgettitle">For More Informations</h2>
+                                  <div class="textwidget"><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227
+                                      <br/>
+                                      <span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 </div>
+                              </li>
+                          </ul>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          <!-- End side menu sidebar -->
+
+          <div class="social_wrapper">
+              <ul><!--social links-->
+                  <li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook-official"></i></a></li>
+                  <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                  <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                  <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+<div class="header_style_wrapper">
+
+  <!-- Begin top bar -->
+  <div class="above_top_bar">
+      <div class="page_content_wrapper">
+
+          <div class="social_wrapper">
+              <ul><!--social links-->
+                  <li class="facebook" *ngIf="userIsAuthenticated">
+                    <a  routerLink="/userprofile" routerLinkActive="mat-accent">
+                      Profile
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a  routerLink="/auth/login" routerLinkActive="mat-accent">
+                      Login
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a >
+                      |
+                    </a>
+                  </li>
+                  <li class="facebook" *ngIf="!userIsAuthenticated">
+                    <a  routerLink="/auth/signup" routerLinkActive="mat-accent">
+                      Sign Up
+                    </a>
+                  </li>
+
+                  <li class="facebook" *ngIf="userIsAuthenticated">
+                    <a  routerLink="" (click)="onLogout()" >
+                      Logout
+                     </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="top_contact_info">
+              <div class="company_address">
+                  <div id="top_contact_address"><span class="ti-location-pin"></span>2 Floor Pak Plaza Double Road PWD</div>
+              </div>
+              <div>
+                  <div id="top_contact_number"><a href="tel:+92-335-5423119"><span class="ti-mobile"></span>+92-335-5423119</a></div>
+              </div>
+              <div>
+                  <div id="top_contact_hours"><span class="ti-alarm-clock"></span>Mon-Fri 09.00 - 17.00 </div>
+              </div>
+          </div>
+          <br class="clear" />
+      </div>
+  </div>
+  <!-- End top bar -->
+ 
+
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        V.E.M.B
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a routerLink="/" style="margin-left:10px;" >Home</a>
+      <a routerLink="/posts" >Cars</a>
+      <a routerLink="/about">About Us</a>
+      <a routerLink="/contactus">Contact Us</a>
+      <a routerLink="/faq">F.A.Q</a>
+      <a routerLink="/inbox">Inbox</a>
+      <button routerLink="/create" routerLinkActive="mat-accent" style="background-color: #27b803; border:0; color: #ffffff;  height:34px; border-radius: 50px 50px 50px 50px; width:140px;padding-top: 5px;padding-bottom:5px;">Sell Your Car</button>
+   
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<div class="main_div" style="margin-top: 0;">
+<div id="page_caption" class="hasbg parallax  withtopbar  " style="background-image:url(../../../assets/web-image-asset/pexels/pexels-jae-park-4141954.jpg); width: 100.5%;">
+
+  <div class="page_title_wrapper">
+      <div class="page_title_inner">
+          <div class="page_title_content">
+              <h1 class="withtopbar">All Available Cars TO Buy</h1>
+              <div class="page_tagline">
+                  Buying Your Dream Car is Not A Dream Anymore. </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+<!-- Begin content -->
+<div id="page_content_wrapper" class="hasbg withtopbar ">
+ 
+  
+  <div>
+    
+      </div>
+
+      <!--New di row starts-->
+      <div class="row">
+        <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <a href="https://www.namecheap.com/promos/coupons/"><img src="../../../assets/ads/namecheap_ad.jpg" width="100%" height="100%"></a>
+        </div>
+        <div class="col col-lg-9 col-md-9 col-sm-9 col-xs-12">
+
+          <!--main area for cars starts-->
+
+          <mat-card style="margin-top: 1.2rem;padding-left: 1rem; border-radius: 50px 50px 50px 0 ;box-shadow: 5px 5px 5px 5px #888888;" *ngFor="let post of posts">
+            <mat-card-title style="text-align: center;border-bottom: 1px solid rgb(179, 179, 179);padding-bottom: 8px;">
+              
+                {{post.make+" - "+post.model}} - {{post.enginecapacity+"cc"}} - {{post.exteriorcolor}}
+            
+            </mat-card-title>
+            <mat-card-content>
+              <div class="row" aria-rowspan="2">
+
+                <div class="col col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                  <img mat-card-image  [src]="post.imagePath" [alt]="post.make" style="margin:10px; margin-bottom: 10px; border-radius:50px 50px 0 50px;" width="300px" height="300px; ">
+                </div>
+                <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-top:10px; margin-bottom: 10px">
+                  <ul style="margin-left: 3px; text-align: center; list-style-type: none;">
+                    <li style="margin-top: 3px;"><h3>Location - {{post.city}}</h3></li>
+                    <li style="margin-top: 3px;"><h3>Registered City - {{post.registrationcity}}</h3></li>
+                    <li style="margin-top: 3px;"><h3>Price -  Rs {{post.price}}</h3></li>
+                    <li style="margin-top: 3px;"><h3>Engine Type :  {{post.enginetype}}</h3></li>
+                    <li style="margin-top: 3px;"><h3>Assembly : {{post.assembly}}</h3></li>
+                  </ul> 
+                  
+                </div>
+                <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                  <button style="margin: 10px;" *ngIf="userIsAuthenticated && userId === post.creator " mat-flat-button color="primary" class="action-buttons" [routerLink]="['/edit',post.id]" > EDIT</button>
+                  <button style="margin: 10px;" *ngIf="userIsAuthenticated && userId === post.creator" mat-flat-button color="warn" class="action-buttons" (click)="onDelete(post.id)" > DELETE</button>
+                  <button style="margin: 10px;" *ngIf="userIsAuthenticated && userId != post.creator " (click)="onchat(post.creator)" mat-flat-button color="accent" class="action-buttons">Chat</button>
+                  <button style="margin: 10px;" mat-flat-button color="primary" class="action-buttons"  (click)="singlepostview(post.id)" >View</button>       
+                </div>
+              </div>
+            </mat-card-content>
+            <mat-card-actions>
+            </mat-card-actions>
+          </mat-card>
+
+
+
+
+        </div>
+      </div>
+      <!--new div row ends-->
+
+
+        
+</div>
+
+
+<!--footer-->
+
+
+<p style="height: 45px;">
+
+</p>
+    <div id="footer" class=" ppb_wrapper screen_fit" style="position: relative;">
+      <ul class="sidebar_widget three">
+          <li id="text-2" class="widget widget_text">
+              <h2 class="widgettitle">About Us</h2>
+              <div class="textwidget">
+                  <p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience. </p>
+                  <!--put logo-->
+                  <!--<p><img src="../../assets/images/logo@2x_white.png" alt="" width="175" height="24"></p>-->
+              </div>
+          </li>
+          <li id="text-3" class="widget widget_text">
+              <h2 class="widgettitle">Contact Info</h2>
+              <div class="textwidget">
+                  <p><span class="ti-mobile" style="margin-right:10px;"></span>+92-335-5423119</p>
+                  <p><span class="ti-location-pin" style="margin-right:10px;"></span>2 Floor Pak Plaza Main Pwd Double </p>
+                  <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</p>
+                  <div style="margin-top:20px;">
+                      <div class="social_wrapper shortcode dark ">
+                          <ul><!--Social Links-->
+                              <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li class="twitter"><a target="_blank" title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                              <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                              <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li id="mc4wp_form_widget-5" class="widget widget_mc4wp_form_widget">
+              <h2 class="widgettitle">Newsletter</h2>
+
+              <div id="mc4wp-form-1" class="mc4wp-form mc4wp-form-27"  data-id="27" data-name="Newsletter">
+                  <div class="mc4wp-form-fields">Don't miss a thing! Sign up to receive daily deals
+
+                      <input type="email" name="EMAIL" placeholder="Your Email Address" required />
+                      <br/>
+                      <input type="submit" value="Subscribe" />
+                  </div>
+                  <label style="display: none !important;">Leave this field empty if you're human:
+                      <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+                  </label>
+
+                  <div class="mc4wp-response"></div>
+                </div>
+          </li>
+      </ul>
+  </div>
+  <div class="footer_bar  ppb_wrapper ">
+
+    <div class="footer_bar_wrapper ">
+        <div class="menu-footer-menu-container">
+          <ul id="footer_menu" class="footer_nav">
+            <li class="menu-item"><a routerLink="/about">About Us</a></li>
+            <li class="menu-item"><a routerLink="/posts">Cars</a></li>
+            <li class="menu-item"><a routerLink="/faq">FAQs</a></li>
+            <li class="menu-item"><a routerLink="/contactus">Contact Us</a></li>
+        </ul>
+        </div>
+        <div id="copyright">© Copyright V.E.M.B</div>
+        <br class="clear" />
+    </div>
+</div>
+<script>
+  const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+});
+</script>

@@ -1,0 +1,104 @@
+<div>
+
+<mat-card class="main_card" *ngIf="userdetails">
+  <div class="help-tip">
+    <p>All Fields are not allowed to be chnaged such as Full Name, CNIC Number. If you any issues head over to <a class="contact_link" routerLink="/contactus">Contact Us</a> and send an email</p>
+  </div>
+  <mat-card-header>
+    <button style="float:left; background-color:green; color:white" [routerLink]="['/userprofile']" mat-raised-button>Return </button>
+    <h2 Class="edit_header">
+      Edit Profile Details
+    </h2>
+  </mat-card-header>
+  <mat-card class="upper_card">
+    <mat-card-header>
+      <h3 Class="edit_header">
+        &#8595; Not Changeable:
+      </h3>
+    </mat-card-header>
+    <mat-card-content>
+      <table style="width: 100%; border: 0">
+        <tr>
+          <td style="margin-left:15%; margin-right:15%;" colspan="1">
+            Full Name :
+
+              <input class="input_smal disabled_field main_card" type="text" value={{userdetails.fullName}} disabled="disabled" >
+
+          </td>
+          <td style="margin-left:auto; margin-right:auto;">
+            Gender :
+
+              <input class="input_smal disabled_field main_card" type="text" value={{userdetails.genderStatus}} disabled >
+
+          </td>
+
+        </tr>
+        <tr>
+          <td style="margin-left:auto; margin-right:auto;">
+            Date of Birth:
+
+              <input type="text" class="input_smal disabled_field main_card" value={{userdetails.dob}} disabled >
+
+          </td>
+          <td style="margin-left:15%; margin-right:15rem;" colspan="1">
+            C.N.I.C Number :
+
+              <input class="input_smal disabled_field main_card" type="text" value={{userdetails.cnicNumber}} disabled >
+
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+
+  <form (submit)="oneditsave(editform)" #editform="ngForm" *ngIf="!isloading">
+  <mat-card *ngIf="userdetails" class="lower_card">
+    <mat-card-header>
+      <h3 Class="edit_header">
+        &#8595; Changeable:
+      </h3>
+    </mat-card-header>
+    <mat-card-content>
+
+        <table style="width: 100%; border: 0">
+          <tr>
+            <td style="margin-left:20%; margin-right:20%;" colspan="1">
+              Email :
+
+                <input class="input_smal disabled_field main_card"  placeholder={{userdetails.email}} name="email" ngModel type="text" #emailInput="ngModel">
+
+            </td>
+            <td style="margin-left:auto; margin-right:auto;">
+              Password :
+
+                <input class="input_smal disabled_field main_card" type="password" placeholder="********" name="password" ngModel id="password-field" #passwordInput="ngModel">
+
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:auto; margin-right:auto;">
+              Phone Number :
+
+                <input type="text" class="input_smal disabled_field main_card" placeholder={{userdetails.phoneNumber}} name="phoneNumber" ngModel  #phoneNumberInput="ngModel" >
+
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="margin-left:auto; margin-right:auto;">
+              Address :
+
+                <input type="text" class="input_smal disabled_field main_card" style="width:100%;" placeholder={{userdetails.fullAddress}} name="fullAddress" ngModel #fullAddressInput="ngModel">
+
+            </td>
+          </tr>
+        </table>
+
+    </mat-card-content>
+    <mat-card-footer>
+
+      <button class="submit_button "  type="submit" mat-raised-button>Submit </button>
+    </mat-card-footer>
+  </mat-card>
+</form>
+</mat-card>
+</div>

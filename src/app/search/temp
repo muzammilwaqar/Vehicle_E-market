@@ -1,0 +1,521 @@
+<!--Header Start-->
+
+
+<a id="close_mobile_menu" href="javascript:;"></a>
+
+<div class="mobile_menu_wrapper">
+    <a id="mobile_menu_close" href="javascript:;" class="button"><span class="ti-close"></span></a>
+
+    <div class="mobile_menu_content">
+
+        <div class="menu-main-menu-container">
+            <ul id="mobile_main_menu" class="mobile_main_nav">
+                <li class="menu-item current-menu-item menu-item-has-children"><a routerLink="/">Home</a>
+                </li>
+                <li class="menu-item menu-item-has-children"><a routerLink="/posts">Cars</a>
+                </li>
+                <li class="menu-item menu-item-has-children"><a href="about-us.html">About Us</a></li>
+                <li class="menu-item menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
+                <li class="menu-item menu-item-has-children"><a href="faqs.html">FAQs</a></li>
+                <li class="menu-item menu-item-has-children"><a href="blog-left-sidebar.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Begin side menu sidebar -->
+        <div class="page_content_wrapper">
+            <div class="sidebar_wrapper">
+                <div class="sidebar">
+
+                    <div class="content">
+
+                        <ul class="sidebar_widget">
+                            <li id="text-8" class="widget widget_text">
+                                <h2 class="widgettitle">For More Informations</h2>
+                                <div class="textwidget"><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227
+                                    <br/>
+                                    <span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End side menu sidebar -->
+
+        <div class="social_wrapper">
+            <ul><!--social links-->
+                <li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook-official"></i></a></li>
+                <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="header_style_wrapper">
+
+<!-- Begin top bar -->
+<div class="above_top_bar">
+    <div class="page_content_wrapper">
+
+        <div class="social_wrapper">
+            <ul><!--social links-->
+                <li class="facebook" *ngIf="userIsAuthenticated">
+                  <a  routerLink="/userprofile" routerLinkActive="mat-accent">
+                    Profile
+                  </a>
+                </li>
+                <li class="facebook" *ngIf="!userIsAuthenticated">
+                  <a  routerLink="/auth/login" routerLinkActive="mat-accent">
+                    Login
+                  </a>
+                </li>
+                <li class="facebook" *ngIf="!userIsAuthenticated">
+                  <a >
+                    |
+                  </a>
+                </li>
+                <li class="facebook" *ngIf="!userIsAuthenticated">
+                  <a  routerLink="/auth/signup" routerLinkActive="mat-accent">
+                    Sign Up
+                  </a>
+                </li>
+
+                <li class="facebook" *ngIf="userIsAuthenticated">
+                  <a  routerLink="" (click)="onLogout()" >
+                    Logout
+                  </a>
+                </li>
+            </ul>
+        </div>
+        <div class="top_contact_info">
+            <div class="company_address">
+                <div id="top_contact_address"><span class="ti-location-pin"></span>2 Floor Pak Plaza Double Road PWD</div>
+            </div>
+            <div>
+                <div id="top_contact_number"><a href="tel:+92-335-5423119"><span class="ti-mobile"></span>+92-335-5423119</a></div>
+            </div>
+            <div>
+                <div id="top_contact_hours"><span class="ti-alarm-clock"></span>Mon-Fri 09.00 - 17.00 </div>
+            </div>
+        </div>
+        <br class="clear" />
+    </div>
+</div>
+<!-- End top bar -->
+<div class="top_bar scroll"  >
+    <div class="standard_wrapper" >
+        <!-- Begin logo -->
+        <div id="logo_wrapper">
+
+            <div id="logo_normal" class="logo_container">
+                <div class="logo_align">
+                    <a id="custom_logo" class="logo_wrapper hidden" routerLink="/">
+                        <!--<img src="../../assets/images/vemb logo new.png" alt="" width="175" height="24" />-->
+                        <h2 style="color:#ffffff; width:100%">V.E.M.B</h2>
+                    </a><!--../../assets/images/logo@2x_white.png-->
+                </div>
+            </div>
+
+            <div id="logo_transparent" class="logo_container">
+                <div class="logo_align">
+                    <a id="custom_logo_transparent" class="logo_wrapper default" routerLink="/">
+                      <h2 style="color:#ffffff; width:100%">V.E.M.B</h2>
+                      <!--<img src="../../assets/images/vemb logo new.png" alt="" width="165" height="24" />-->
+                    </a>
+                </div>
+
+            <!-- End logo -->
+
+            <div id="menu_wrapper" style="float: right; margin-left: 75rem; ">
+                <div id="nav_wrapper">
+                    <div class="nav_wrapper_inner">
+                        <div id="menu_border_wrapper">
+                            <div class="menu-main-menu-container">
+                                <ul id="main_menu" class="nav">
+                                    <li class="menu-item  menu-item-has-children ">
+                                      <a routerLink="/" style="font-size:15px;">
+                                        Home
+                                      </a>
+                                    </li>
+                                    <li class="menu-item  menu-item-has-children ">
+                                      <a style="font-size:16px;">
+                                        |
+                                      </a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children ">
+                                      <a routerLink="/posts" style="font-size:15px;">
+                                        Cars
+                                      </a>
+                                    </li>
+                                    <li class="menu-item  menu-item-has-children ">
+                                      <a style="font-size:16px;">
+                                        |
+                                      </a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children">
+                                      <a routerLink="/about" style="font-size:15px;">
+                                        About Us
+                                      </a>
+                                    </li>
+                                    <li class="menu-item  menu-item-has-children ">
+                                      <a style="font-size:16px;">
+                                        |
+                                      </a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children">
+                                      <a routerLink="/contactus" style="font-size:15px;">
+                                        Contact Us
+                                      </a>
+                                    </li>
+                                    <li class="menu-item  menu-item-has-children ">
+                                      <a style="font-size:16px;">
+                                        |
+                                      </a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children">
+                                      <a routerLink="/faq" style="font-size:15px;">
+                                        FAQs
+                                      </a>
+                                    </li>
+                                    <li class="menu-item  menu-item-has-children ">
+                                      <a style="font-size:16px;">
+                                        |
+                                      </a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children ">
+                                      <a routerLink="/blog" style="font-size:15px;">
+                                        Blog
+                                      </a>
+                                    </li>
+                                    <li class="menu-item  menu-item-has-children ">
+                                      <a style="font-size:16px;">
+                                        |
+                                      </a>
+                                    </li>
+                                    <li class="menu-item  menu-item-has-children ">
+                                      <button routerLink="/create" routerLinkActive="mat-accent" style="background-color: #27b803; border:0; color: #ffffff; font-size:18px; height:34px; border-radius: 50px 50px 50px 50px; width:140px;">
+                                        Sell Your Car
+                                      </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End right corner buttons -->
+                </div>
+                <!-- End main nav -->
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!--Header End-->
+
+
+<!--Main Content-->
+
+<div id="page_caption" class="hasbg parallax  withtopbar  " style="background-image:url(../../assets/web-image-asset/pexels/pexels-avinash-patel-544542.jpg);">
+
+  <div class="page_title_wrapper">
+      <div class="page_title_inner">
+          <div class="page_title_content">
+              <h1 class="withtopbar">All Your Desired Car Searched</h1>
+              <div class="page_tagline">
+                  This shows you all the ads related to the search you have tried </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+<!-- Begin content -->
+<div id="page_content_wrapper" class="hasbg withtopbar ">
+  <form id="car_search_form" name="car_search_form" method="get" action="#">
+      <div class="car_search_wrapper">
+          <div class="one_fourth themeborder">
+              <select id="brand" name="brand">
+                  <option value="">Any Brand</option>
+                  <option value="Audi">Audi</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Lexus">Lexus</option>
+                  <option value="Mercedes Benz">Mercedes Benz</option>
+                  <option value="MINI">MINI</option>
+                  <option value="Porsche">Porsche</option>
+              </select>
+              <span class="ti-angle-down"></span>
+          </div>
+          <div class="one_fourth themeborder">
+              <select id="type" name="type">
+                  <option value="">Any Type</option>
+                  <option value="Coupe">Coupe</option>
+                  <option value="Sedan">Sedan</option>
+                  <option value="SUV">SUV</option>
+              </select>
+              <span class="ti-angle-down"></span>
+          </div>
+          <div class="one_fourth themeborder">
+              <select id="sort_by" name="sort_by">
+                  <option value="price_low">Price Low to High</option>
+                  <option value="price_high">Price High to Low</option>
+                  <option value="model">Sort By Model</option>
+                  <option value="popular">Sort By Popularity</option>
+                  <option value="review">Sort By Review Score</option>
+              </select>
+              <span class="ti-exchange-vertical"></span>
+          </div>
+          <div class="one_fourth last themeborder">
+              <input id="car_search_btn" type="submit" class="button" value="Search" />
+          </div>
+      </div>
+  </form>
+
+  <!-- Begin content -->
+
+  <div class="inner">
+
+      <div class="inner_wrapper nopadding">
+
+          <div id="page_main_content" class="sidebar_content left_sidebar fixed_column">
+
+              <div class="standard_wrapper">
+
+                  <div id="portfolio_filter_wrapper" class="gallery classic two_cols portfolio-content section content clearfix" data-columns="3">
+
+                      <div class="car_list_wrapper floatleft noborder">
+                          <div class="one">
+                              <a class="car_image" href="#">
+                                  <img src="../../assets/web-image-asset/unsplash/chuttersnap-gts_Eh4g1lk-unsplash.jpg" alt="BMW 3 Series" />
+                              </a>
+                          </div>
+
+                          <div class="one">
+                              <div class="car_attribute_wrapper car_list">
+                                  <a class="car_link" href="#"><h3>BMW 3 Series</h3></a>
+                                  <div class="car_attribute_rating">
+                                      <div class="br-theme-fontawesome-stars-o">
+                                          <div class="br-widget">
+                                              <a href="javascript:;" class="br-selected"></a>
+                                              <a href="javascript:;" class="br-selected"></a>
+                                              <a href="javascript:;" class="br-selected"></a>
+                                              <a href="javascript:;" class="br-selected"></a>
+                                              <a href="javascript:;"></a>
+                                          </div>
+                                      </div>
+                                      <div class="car_attribute_rating_count">
+                                          4&nbsp; reviews </div>
+                                  </div>
+                                  <br class="clear" />
+                                  <div class="one_third">
+                                      <div class="car_attribute_wrapper_icon">
+                                          <div class="one_fourth">
+                                              <div class="car_attribute_icon ti-user"></div>
+                                              <div class="car_attribute_content">
+                                                  4 </div>
+                                          </div>
+
+                                          <div class="one_fourth">
+                                              <div class="car_attribute_icon ti-briefcase"></div>
+                                              <div class="car_attribute_content">
+                                                  2 </div>
+                                          </div>
+
+                                          <div class="one_fourth">
+                                              <div class="car_attribute_icon ti-panel"></div>
+                                              <div class="car_attribute_content">
+                                                  Auto </div>
+                                          </div>
+
+                                      </div>
+                                      <br class="clear" />
+                                  </div>
+
+                                  <div class="two_third last">
+                                      <ul class="single_car_departure_wrapper themeborder">
+                                          <li>
+                                              <div class="single_car_departure_content full_width">
+                                                  <div class="one_half ">
+                                                      <span class="ti-check"></span>Audio input </div>
+                                                  <div class="one_half last">
+                                                      <span class="ti-check"></span>All Wheel drive </div>
+                                                  <div class="one_half ">
+                                                      <span class="ti-check"></span>Bluetooth </div>
+                                                  <div class="one_half last">
+                                                      <span class="ti-check"></span>USB input </div>
+                                                  <div class="one_half ">
+                                                      <span class="ti-check"></span>Heated seats </div>
+                                                  <div class="one_half last">
+                                                      <span class="ti-check"></span>FM Radio </div>
+                                              </div>
+                                          </li>
+                                      </ul>
+                                  </div>
+
+                              </div>
+                              <div class="car_attribute_price car_list">
+                                  <div class="car_attribute_price_day two_cols">
+                                      <span class="single_car_currency">$</span><span class="single_car_price">64</span> <span class="car_unit_day">Per Day</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                  <br class="clear" />
+                  <div class="pagination"><span class="current">1</span><a href='#' class="inactive">2</a></div>
+                  <div class="pagination_detail">
+                      Page 1 of 2 </div>
+
+              </div>
+          </div>
+
+          <div class="sidebar_wrapper left_sidebar">
+              <div class="sidebar">
+
+                  <div class="content">
+
+                      <ul class="sidebar_widget">
+                          <li id="text-4" class="widget widget_text">
+                              <h2 class="widgettitle">For More Informations</h2>
+                              <div class="textwidget"><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227
+                                  <br/>
+                                  <span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00</div>
+                          </li>
+                          <li id="grandcarrental_cat_posts-2" class="widget grandcarrental_Cat_Posts">
+                              <h2 class="widgettitle"><span>Rental Tips</span></h2>
+                              <ul class="posts blog withthumb ">
+                                  <li>
+                                      <div class="post_circle_thumb">
+                                          <a href="#"><img class="alignleft frame post_thumb" src="../../assets/web-image-asset/unsplash/clement-m-Ng3xrviPrhk-unsplash.jpg" alt="" /></a>
+                                      </div><a href="#">America Car Rental Offers Lowest Car Rental Rates</a>
+                                      <div class="post_attribute">January 5, 2017</div>
+                                  </li>
+                                  <li>
+                                      <div class="post_circle_thumb">
+                                          <a href="#"><img class="alignleft frame post_thumb" src="../../assets/web-image-asset/unsplash/carspotterph-AeEvsLTA1Wo-unsplash.jpg alt="" /></a>
+                                      </div><a href="#">How to Enjoy Sightseeing Los Angeles With Car Rentals</a>
+                                      <div class="post_attribute">January 4, 2017</div>
+                                  </li>
+                                  <li>
+                                      <div class="post_circle_thumb">
+                                          <a href="#"><img class="alignleft frame post_thumb" src="../../assets/web-image-asset/unsplash/erik-mclean-ZRns2R5azu0-unsplash.jpg" alt="" /></a>
+                                      </div><a href="#">Ride Across the Blue Ridge Parkway</a>
+                                      <div class="post_attribute">January 3, 2017</div>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li id="grandcarrental_social_profiles_posts-3" class="widget grandcarrental_Social_Profiles_Posts">
+                              <h2 class="widgettitle">Connect with Us</h2>
+                              <div class="social_wrapper shortcode light small">
+                                  <ul>
+                                      <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                      <li class="twitter"><a target="_blank" title="Twitter" href="https://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
+                                      <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                                      <li class="pinterest"><a target="_blank" title="Pinterest" href="https://pinterest.com/#"><i class="fa fa-pinterest"></i></a></li>
+                                      <li class="instagram"><a target="_blank" title="Instagram" href="https://instagram.com/theplanetd"><i class="fa fa-instagram"></i></a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                      </ul>
+
+                  </div>
+
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+
+<!--main Content-->
+
+
+<!--Footer-->
+
+
+<p style="height: 45px;">
+
+</p>
+    <div id="footer" class=" ppb_wrapper" style="position: relative;">
+      <ul class="sidebar_widget three">
+          <li id="text-2" class="widget widget_text">
+              <h2 class="widgettitle">About Us</h2>
+              <div class="textwidget">
+                  <p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience. </p>
+                  <!--put logo-->
+                  <!--<p><img src="../../assets/images/logo@2x_white.png" alt="" width="175" height="24"></p>-->
+              </div>
+          </li>
+          <li id="text-3" class="widget widget_text">
+              <h2 class="widgettitle">Contact Info</h2>
+              <div class="textwidget">
+                  <p><span class="ti-mobile" style="margin-right:10px;"></span>+92-335-5423119</p>
+                  <p><span class="ti-location-pin" style="margin-right:10px;"></span>2 Floor Pak Plaza Main Pwd Double </p>
+                  <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</p>
+                  <div style="margin-top:20px;">
+                      <div class="social_wrapper shortcode dark ">
+                          <ul><!--Social Links-->
+                              <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li class="twitter"><a target="_blank" title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                              <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                              <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li id="mc4wp_form_widget-5" class="widget widget_mc4wp_form_widget">
+              <h2 class="widgettitle">Newsletter</h2>
+
+              <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-27" method="post" data-id="27" data-name="Newsletter">
+                  <div class="mc4wp-form-fields">Don't miss a thing! Sign up to receive daily deals
+
+                      <input type="email" name="EMAIL" placeholder="Your Email Address" required />
+                      <br/>
+                      <input type="submit" value="Subscribe" />
+                  </div>
+                  <label style="display: none !important;">Leave this field empty if you're human:
+                      <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+                  </label>
+
+                  <div class="mc4wp-response"></div>
+              </form>
+          </li>
+      </ul>
+  </div>
+  <div class="footer_bar  ppb_wrapper ">
+
+    <div class="footer_bar_wrapper ">
+        <div class="menu-footer-menu-container">
+          <ul id="footer_menu" class="footer_nav">
+            <li class="menu-item"><a routerLink="/about">About Us</a></li>
+            <li class="menu-item"><a routerLink="/posts">Cars</a></li>
+            <li class="menu-item"><a routerLink="/faq">FAQs</a></li>
+            <li class="menu-item"><a routerLink="/contactus">Contact Us</a></li>
+        </ul>
+        </div>
+        <div id="copyright">© Copyright V.E.M.B</div>
+        <br class="clear" />
+    </div>
+</div>
+
+
+<!--footer-->

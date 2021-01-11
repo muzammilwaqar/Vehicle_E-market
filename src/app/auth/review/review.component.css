@@ -1,0 +1,58 @@
+*
+{
+  width: 100%;
+}
+.main_card_content_field_text_area_input
+{
+  height: 8rem;
+  font-size:15px;
+  letter-spacing:1px;
+}
+.main_card_actions
+{
+  margin-left: 24%;
+}
+.main_card
+{
+  margin-top:5rem;
+}
+.main_card_title
+{
+  margin-left:28%;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing:1.5px;
+  word-spacing: 1.5px;
+}
+.main_card_actions_submit
+{
+  margin-left:30%;
+  width:50%;
+  border-radius: 30px;
+  height:3rem;
+  font-size:16px;
+  letter-spacing:4px;
+  color:#FFFFFF;
+  background-color:#FF4081;
+}
+.main_card_actions_submit:hover
+{
+  color:#FF4081;
+  background-color: #FFFFFF;
+}
+@media (max-width:700px)
+{
+  *
+  {
+  width:100%;
+  margin-left: 2rem;
+  }
+  .main_card_actions
+  {
+    margin-left: 24%;
+  }
+  .main_card_content
+  {
+    width:100%;
+  }
+}

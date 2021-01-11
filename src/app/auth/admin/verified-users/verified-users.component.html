@@ -1,0 +1,56 @@
+
+
+<div class="container" style=" width:125.6%; margin-left:-10.2rem;">
+  <div class="sidebar">
+    <a routerLink='/auth/admin'>Home</a>
+    <a routerLink='/auth/create-admin'>Create Admin</a>
+    <a routerLink='/auth/allusers'>All Users</a>
+    <a routerLink='/auth/unverified' >Unverified Users</a>
+    <a routerLink='/auth/verified'>Verified Users</a>
+    <a routerLink="/create">Post and Ad</a>
+    <a routerLink="/userprofile">Profile</a>
+    <a routerLink="/">Main Web</a>
+    <a (click)="onLogout()">Logout</a>
+  
+  </div>
+
+  <div class="content" >
+    <div class="row" style="margin-top: 7.8rem;" >
+      <div class="limiter">
+        <div class="container-table100">
+          <div class="wrap-table100">
+            <div class="table100">
+              <table>
+                <thead>
+                  <tr class="table100-head">
+                    <th class="column1">Full Name</th>
+                    <th class="column2">CNIC</th>
+                    <th class="column3">Email</th>
+                    <th class="column4">Phone</th>
+
+                    <th class="column6">Action</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let user of verifiedUsers">
+                    <tr>
+                      <td class="column1">{{user.fullName}} </td>
+                      <td class="column2">{{user.cnicNumber}}</td>
+                      <td class="column3">{{user.email}}</td>
+                      <td class="column4">{{user.phoneNumber}}</td>
+
+                      <td class="column5">
+                        <a mat-flat-button color="primary" (click)="ondisbale(user.cnicNumber)"  > Disable </a>
+                        <button mat-flat-button color="warn" (click)="onDelete(user.cnicNumber)" > DELETE </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+

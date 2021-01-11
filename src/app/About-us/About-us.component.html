@@ -1,0 +1,329 @@
+<script src="https://kit.fontawesome.com/0e1ab11ce7.js" crossorigin="anonymous"></script>
+
+
+
+<div  class="about_us_container">
+<!--body div start--> 
+
+
+<div class="mobile_menu_wrapper">
+  <a id="mobile_menu_close" href="javascript:;" class="button"><span class="ti-close"></span></a>
+
+  <div class="mobile_menu_content">
+
+      <div class="menu-main-menu-container">
+          <ul id="mobile_main_menu" class="mobile_main_nav">
+              <li class="menu-item current-menu-item menu-item-has-children"><a routerLink="/">Home</a>
+              </li>
+              <li class="menu-item menu-item-has-children"><a routerLink="/posts">Cars</a>
+              </li>
+              <li class="menu-item menu-item-has-children"><a href="about-us.html">About Us</a></li>
+              <li class="menu-item menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
+              <li class="menu-item menu-item-has-children"><a href="faqs.html">FAQs</a></li>
+              <li class="menu-item menu-item-has-children"><a href="blog-left-sidebar.html">Blog</a>
+              </li>
+          </ul>
+      </div>
+
+      <!-- Begin side menu sidebar -->
+      <div class="page_content_wrapper">
+          <div class="sidebar_wrapper">
+              <div class="sidebar">
+
+                  <div class="content">
+
+                      <ul class="sidebar_widget">
+                          <li id="text-8" class="widget widget_text">
+                              <h2 class="widgettitle">For More Informations</h2>
+                              <div class="textwidget"><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227
+                                  <br/>
+                                  <span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 </div>
+                          </li>
+                      </ul>
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+      <!-- End side menu sidebar -->
+
+      <div class="social_wrapper">
+          <ul><!--social links-->
+              <li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook-official"></i></a></li>
+              <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+              <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+              <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="header_style_wrapper">
+
+<!-- Begin top bar -->
+<div class="above_top_bar">
+  <div class="page_content_wrapper">
+
+      <div class="social_wrapper">
+          <ul><!--social links-->
+              <li class="facebook" *ngIf="userIsAuthenticated">
+                <a  routerLink="/userprofile" routerLinkActive="mat-accent">
+                  Profile
+                </a>
+              </li>
+              <li class="facebook" *ngIf="!userIsAuthenticated">
+                <a  routerLink="/auth/login" routerLinkActive="mat-accent">
+                  Login
+                </a>
+              </li>
+              <li class="facebook" *ngIf="!userIsAuthenticated">
+                <a >
+                  |
+                </a>
+              </li>
+              <li class="facebook" *ngIf="!userIsAuthenticated">
+                <a  routerLink="/auth/signup" routerLinkActive="mat-accent">
+                  Sign Up
+                </a>
+              </li>
+
+              <li class="facebook" *ngIf="userIsAuthenticated">
+                <a  routerLink="" (click)="onLogout()" >
+                  Logout
+                </a>
+              </li>
+          </ul>
+      </div>
+      <div class="top_contact_info">
+          <div class="company_address">
+              <div id="top_contact_address"><span class="ti-location-pin"></span>2 Floor Pak Plaza Double Road PWD</div>
+          </div>
+          <div>
+              <div id="top_contact_number"><a href="tel:+92-335-5423119"><span class="ti-mobile"></span>+92-335-5423119</a></div>
+          </div>
+          <div>
+              <div id="top_contact_hours"><span class="ti-alarm-clock"></span>Mon-Fri 09.00 - 17.00 </div>
+          </div>
+      </div>
+      <br class="clear" />
+  </div>
+</div>
+<!-- End top bar -->
+
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      V.E.M.B
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a routerLink="/" style="margin-left:10px;" >Home</a>
+    <a routerLink="/posts" >Cars</a>
+    <a routerLink="/about">About Us</a>
+    <a routerLink="/contactus">Contact Us</a>
+    <a routerLink="/faq">F.A.Q</a>
+    <a routerLink="/inbox">Inbox</a>
+    <button routerLink="/create" routerLinkActive="mat-accent" style="background-color: #27b803; border:0; color: #ffffff;  height:34px; border-radius: 50px 50px 50px 50px; width:140px;padding-top: 5px;padding-bottom:5px;">Sell Your Car</button>
+ 
+  </div>
+</div>
+
+</div>
+
+
+
+  <div class="ppb_wrapper  screen_fit">
+      <div class="one withsmallpadding ppb_header_youtube withbg parallax"  style="padding-top: 150px !important;text-align:center;height:800px;background-image:url(../../assets/web-image-asset/pexels/pexels-chris-howard-755298.jpg);background-position: center center;color:#ffffff; text-align:center;padding-top:15rem 0 15rem 0;">
+          <div class="overlay_background" style="background:#000000;background:rgb(0,0,0,0.5);background:rgba(7, 6, 6, 0.5);"></div>
+          <div class="standard_wrapper">
+              <div class="page_content_wrapper">
+                  <div class="inner">
+                      <div >
+                          <h2 class="ppb_title" style="color:#ffffff; font-size:50px; letter-spacing:1.5px; padding-top: 25%;">We are Pakistans Best Vehicle </h2>
+                          <h2 class="ppb_title" style="color:#ffffff; font-size:50px; letter-spacing:1.5px; padding-top:10px ;"> E-Market </h2>
+                          <div class="page_tagline" style="color:#ffffff; font-size:25px; letter-spacing:1.5px; padding-top:18px ;">Buy - Sell - Know Latest Trends and News</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="one withsmallpadding ppb_header " style="text-align:center;padding:50px 0 50px 0;background-color:#1485f0;color:#ffffff;">
+          <div class="standard_wrapper">
+              <div class="page_content_wrapper">
+                  <div class="inner">
+                      <div >
+                          <h2 class="ppb_title" style="color:#ffffff;font-size:25px; letter-spacing:1.5px; padding-top:18px ;">This adventure isn’t about change but it seems to be an inevitability.</h2>
+                          <div class="ppb_header_content">
+                              <p style="color:#ffffff;font-size:13px; letter-spacing:1.5px; word-spacing:1px; padding-top:18px ;">Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud.Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi. Et leggings fanny pack, elit bespoke vinyl art party Pitchfork selfies master cleanse.</p>
+                              <p> </p>
+
+                              <p>
+                                  <br class="clear" />
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="one withsmallpadding ppb_contact_half_bg withbg parallax " style="background-image:url(upload/evening.jpg);background-position: center center;padding:40px 0 40px 0;">
+        <div class="standard_wrapper">
+          <div class="inner">
+            <div class="inner_wrapper">
+              <div class="container">
+                <div class="row" style=" border-radius: 50px 0 0 50px;">
+                  <div class="col col-xs-12 col-md-12 col-sm-12 col-lg-12 col-xl-12" style="border-radius: 50px 50px 50px 50px; margin-bottom: 2rem; height:13rem; padding: 2rem;background-image: linear-gradient(to bottom right, #3b3b3b, rgb(0, 183, 255)); ">
+                    <h2 style="font-size:20px; letter-Spacing:1px; word-spacing: 0.5px; color:#ffffff; width:100% ; padding-left:20rem;" >
+                       Don't Be Shy to Get In Touch. Have Something to Ask or Tell
+                    </h2>
+                    <h2 style="font-size:20px; letter-Spacing:1px; word-spacing: 0.5px; color:#ffffff; width:100% ; padding-left:31rem;" >
+                      Just Say Hi!
+                    </h2>
+                    <button class="btn glowing_btn_buy" routerLink="/contactus" style="margin-right:20rem;margin-left:25rem; width:20rem; height: 3rem; margin-bottom:0.7rem; border-radius: 50px 50px 50px 50px; background-color: #f81d00; color:#ffffff;"  >
+                      Contact Us Now!
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="one withsmallpadding ppb_header " style="text-align:center;padding:0px 0 0px 0;margin-top:60px;margin-bottom:20px;">
+      <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+              <div class="inner">
+                  <div style="margin:auto;width:100%">
+                      <h2 class="ppb_title" style="font-size:35px; letter-spacing: 1.2px; font-weight:bold;">Meet Our Team</h2>
+                      <div class="page_tagline" style="font-size:22px; letter-spacing:1.2px;">Pakistan's First Vehicle E-Market with Security Focused</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="one withsmallpadding ppb_team_column" >
+      <div class="page_content_wrapper page_main_content sidebar_content full_width fixed_column photoframe">
+          <div class="standard_wrapper">
+              <div id="15722574382014118329" class="portfolio_filter_wrapper gallery five_cols" data-columns="2" >
+                  <div class="element grid photoframe fixed_columns classic5_cols animated1" >
+                      <div class="one_fifth gallery5 classic filterable">
+                          <div class="post_img">
+                            <img class="team_pic" src="../../assets/web-user-image/20191221_145519.jpeg" alt="" />
+                          </div>
+                          <div class="portfolio_info_wrapper center">
+                              <h4>Muzammil Waqar</h4>
+                              <div class="page_tagline">C.E.O</div>
+
+                          </div>
+                      </div>
+                  </div>
+                  <div class="element grid photoframe fixed_columns classic5_cols animated2" style="margin-left:0; ">
+                      <div class="one_fifth gallery5 classic filterable">
+                          <div class="post_img"><img class="team_pic" src="../../assets/web-user-image/20191221_145519.jpeg" alt="" />
+                              <ul class="social_wrapper team">
+                                  <li><a title="John Bennett on Twitter" target="_blank" class="tooltip" href="https://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
+                                  <li><a title="John Bennett on Facebook" target="_blank" class="tooltip" href="https://facebook.com/#"><i class="fa fa-facebook"></i></a></li>
+                                  <li><a title="John Bennett on Google+" target="_blank" class="tooltip" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                  <li><a title="John Bennett on Linkedin" target="_blank" class="tooltip" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="portfolio_info_wrapper center">
+                              <h4>Obaid Ullah</h4>
+                              <div class="page_tagline">C.O.O</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <p style="height: 45px;">
+
+  </p>
+      <div id="footer" class=" ppb_wrapper screen_fit" >
+        <ul class="sidebar_widget three">
+            <li id="text-2" class="widget widget_text">
+                <h2 class="widgettitle">About Us</h2>
+                <div class="textwidget">
+                    <p>Getting dressed up and traveling with good friends makes for a shared, unforgettable experience. </p>
+                    <!--put logo-->
+                    <!--<p><img src="../../assets/images/logo@2x_white.png" alt="" width="175" height="24"></p>-->
+                </div>
+            </li>
+            <li id="text-3" class="widget widget_text">
+                <h2 class="widgettitle">Contact Info</h2>
+                <div class="textwidget">
+                    <p><span class="ti-mobile" style="margin-right:10px;"></span>+92-335-5423119</p>
+                    <p><span class="ti-location-pin" style="margin-right:10px;"></span>2 Floor Pak Plaza Main Pwd Double </p>
+                    <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</p>
+                    <div style="margin-top:20px;">
+                        <div class="social_wrapper shortcode dark ">
+                            <ul><!--Social Links-->
+                                <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li class="twitter"><a target="_blank" title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+                                <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li class="instagram"><a target="_blank" title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li id="mc4wp_form_widget-5" class="widget widget_mc4wp_form_widget">
+                <h2 class="widgettitle">Newsletter</h2>
+
+                <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-27" method="post" data-id="27" data-name="Newsletter">
+                    <div class="mc4wp-form-fields">Don't miss a thing! Sign up to receive daily deals
+
+                        <input type="email" name="EMAIL" placeholder="Your Email Address" required />
+                        <br/>
+                        <input type="submit" value="Subscribe" />
+                    </div>
+                    <label style="display: none !important;">Leave this field empty if you're human:
+                        <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+                    </label>
+
+                    <div class="mc4wp-response"></div>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="footer_bar  ppb_wrapper ">
+
+      <div class="footer_bar_wrapper ">
+          <div class="menu-footer-menu-container">
+            <ul id="footer_menu" class="footer_nav">
+              <li class="menu-item"><a routerLink="/about">About Us</a></li>
+              <li class="menu-item"><a routerLink="/posts">Cars</a></li>
+              <li class="menu-item"><a routerLink="/faq">FAQs</a></li>
+              <li class="menu-item"><a routerLink="/contactus">Contact Us</a></li>
+          </ul>
+          </div>
+          <div id="copyright">© Copyright V.E.M.B</div>
+          <br class="clear" />
+      </div>
+  </div>
+
+<!--body div Ends-->
+</div>
